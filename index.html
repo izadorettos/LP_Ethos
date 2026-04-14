@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethos Leadership — Caráter que lidera. Virtude que transforma.</title>
+
+<!-- Cormorant Garamond (display) via Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<!-- NAVEGAÇÃO -->
+<nav>
+  <a href="#" class="nav-logo">
+    <span>ἤθος</span>
+    Ethos
+  </a>
+
+  <!-- Links desktop -->
+  <div class="nav-links">
+    <a href="#metodo"    class="nav-link">Método SYM</a>
+    <a href="#turma"     class="nav-link">Turma Aberta</a>
+    <a href="#sobre"     class="nav-link">A Fundadora</a>
+    <a href="#oferta"   class="nav-link">Investimento</a>
+    <a href="#faq"       class="nav-link">Perguntas Frequentes</a>
+  </div>
+
+  <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="nav-cta">Quero minha vaga</a>
+
+  <!-- Hamburguer mobile -->
+  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Menu mobile drawer -->
+<nav class="nav-mobile" id="navMobile" aria-hidden="true">
+  <a href="#metodo"    class="nav-link" onclick="closeMenu()">Método SYM</a>
+  <a href="#turma"     class="nav-link" onclick="closeMenu()">Turma Aberta</a>
+  <a href="#sobre"     class="nav-link" onclick="closeMenu()">A Fundadora</a>
+  <a href="#oferta"   class="nav-link" onclick="closeMenu()">Investimento</a>
+  <a href="#faq"       class="nav-link" onclick="closeMenu()">Perguntas Frequentes</a>
+  <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="nav-cta" onclick="closeMenu()">Quero minha vaga</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="hero-bg-text">ETHOS</div>
+
+  <p class="hero-greek">ἤθος</p>
+  <h1 class="hero-title display">ETHOS</h1>
+  <div class="hero-divider">
+    <div class="hero-divider-dot"></div>
+  </div>
+  <p class="hero-sub">Leadership</p>
+  <p class="hero-tagline display">Caráter que lidera. Virtude que transforma.</p>
+
+  <div class="hero-buttons">
+    <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="btn-primary">Quero minha vaga</a>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Rolar</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- MARQUEE — itens únicos, JS duplica para loop suave -->
+<div class="marquee-section">
+  <div class="marquee-track" id="trackPhrases">
+    <span class="marquee-item">Prudência</span>
+    <span class="marquee-item marquee-sep">·</span>
+    <span class="marquee-item">Justiça</span>
+    <span class="marquee-item marquee-sep">·</span>
+    <span class="marquee-item">Fortaleza</span>
+    <span class="marquee-item marquee-sep">·</span>
+    <span class="marquee-item">Temperança</span>
+    <span class="marquee-item marquee-sep">·</span>
+    <span class="marquee-item">Humildade</span>
+    <span class="marquee-item marquee-sep">·</span>
+    <span class="marquee-item">Magnanimidade</span>
+    <span class="marquee-item marquee-sep">·</span>
+  </div>
+</div>
+
+<!-- MANIFESTO -->
+<section class="manifesto" id="manifesto">
+  <div class="section-inner">
+    <p class="section-label fade-up">O Manifesto</p>
+    <h2 class="section-title display fade-up">De onde viemos.<br><em>Para onde vamos.</em></h2>
+    <div class="section-rule fade-up"></div>
+
+    <p class="manifesto-intro fade-up">
+      "A liderança baseada no medo perdeu espaço. O futuro exige caráter e virtuosismo."
+    </p>
+
+    <div class="eras-grid fade-up">
+      <div class="era-card">
+        <div class="era-num display">01</div>
+        <p class="era-label">Era 1</p>
+        <h3 class="era-title display">O Tubarão</h3>
+        <p class="era-text">Performance a qualquer custo. Times oprimidos por medo.</p>
+      </div>
+      <div class="era-card">
+        <div class="era-num display">02</div>
+        <p class="era-label">Era 2</p>
+        <h3 class="era-title display">O Omissivo</h3>
+        <p class="era-text">Líderes sem autoridade. Gentileza sem firmeza não é virtude, mas omissão.</p>
+      </div>
+      <div class="era-card">
+        <div class="era-num display">03</div>
+        <p class="era-label">Era 3</p>
+        <h3 class="era-title display">O Virtuoso</h3>
+        <p class="era-text">O equilíbrio exato. Serve porque forma, exige porque acredita em resultados.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTODO -->
+<section class="metodo" id="metodo">
+  <div class="section-inner">
+    <div class="metodo-grid">
+      <div>
+        <p class="section-label fade-up">Como funciona</p>
+        <h2 class="section-title display fade-up">O Método<br><em>SYM</em></h2>
+        <div class="section-rule fade-up"></div>
+
+        <ul class="metodo-list fade-up">
+          <li class="metodo-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p class="metodo-item-title display">Metodologia ativa</p>
+            </div>
+            <div class="accordion-content">
+              <p class="metodo-item-desc">No Ethos Leadership, você não é um espectador passivo. Cada encontro é construído para que você seja o protagonista do próprio desenvolvimento. Utilizamos dinâmicas de role-play, simulações de situações corporativas reais e debates estruturados para que o aprendizado aconteça pelo fazer — não pelo ouvir. A metodologia ativa parte do pressuposto aristotélico de que o caráter se forma na prática repetida: não basta saber o que é prudência, é preciso exercitá-la sob pressão. Você sairá de cada módulo com uma entrega concreta aplicável na semana seguinte.</p>
+            </div>
+          </li>
+          <li class="metodo-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p class="metodo-item-title display">Aprendizagem baseada em problemas</p>
+            </div>
+            <div class="accordion-content">
+              <p class="metodo-item-desc">Esqueça cases de Harvard ou exemplos genéricos de gestão. Aqui trabalhamos exclusivamente com situações extraídas da trincheira das empresas brasileiras: o gestor que não consegue demitir quem precisa ser demitido, a equipe que entrega só quando o líder está presente, o conflito entre dois líderes sênior que paralisa departamentos inteiros. Cada problema trazido para a sala passa por análise filosófica — identificando qual virtude está ausente ou em excesso — e por análise prática, com ferramentas e planos de ação testados em campo. Você aprende resolvendo, não memorizando.</p>
+            </div>
+          </li>
+          <li class="metodo-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p class="metodo-item-title display">24h de formação presencial</p>
+            </div>
+            <div class="accordion-content">
+              <p class="metodo-item-desc">São 6 encontros presenciais de 4 horas cada, distribuídos ao longo do programa, em ritmo que permite absorver, aplicar no trabalho e retornar com novas perguntas. O formato presencial não é acidente — é filosofia. A transformação de caráter exige fricção real, olho no olho, discussão que desacomoda. Cada sessão tem estrutura definida: abertura reflexiva, conteúdo aplicado, laboratório prático e encerramento com compromisso individual. O ambiente é deliberadamente pequeno e seguro para que conversas difíceis aconteçam com profundidade.</p>
+            </div>
+          </li>
+          <li class="metodo-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p class="metodo-item-title display">2 mentorias online ao vivo</p>
+            </div>
+            <div class="accordion-content">
+              <p class="metodo-item-desc">Dois momentos exclusivos de direcionamento individual com Daniela Athia, agendados em datas estratégicas do programa: uma na fase inicial, para calibrar suas metas e identificar os padrões de comportamento que precisam ser trabalhados com urgência; e outra na fase final, para consolidar os avanços, mapear os pontos cegos que persistem e construir um plano de continuidade pós-programa. Daniela mergulha na sua realidade específica — seu setor, sua equipe, suas tensões — e entrega orientações cirúrgicas que vão muito além do conteúdo coletivo dos encontros presenciais.</p>
+            </div>
+          </li>
+          <li class="metodo-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p class="metodo-item-title display">Material didático exclusivo</p>
+            </div>
+            <div class="accordion-content">
+              <p class="metodo-item-desc">Você recebe um conjunto de materiais desenvolvido e refinado ao longo de mais de 20 anos de atuação da SYM Gente e Gestão dentro de empresas reais. O arsenal inclui: apostilas temáticas com base filosófica e aplicação prática para cada uma das seis virtudes; frameworks de diagnóstico de cultura organizacional; ferramentas de avaliação comportamental de equipes; guias de feedback estruturado por nível de maturidade do colaborador; mapas de gestão de conflitos; e roteiros de reuniões de alta performance. Todo material é físico e digital, para uso imediato e consulta contínua após o programa.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="metodo-aside fade-up">
+        <div class="metodo-aside-box">
+          <p class="metodo-aside-label">O resultado</p>
+          <p class="metodo-aside-quote display">"O resultado não é um líder que sabe mais. É um líder que é mais."</p>
+        </div>
+        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Gostaria+de+fazer+um+diagn%C3%B3stico+do+meu+n%C3%ADvel+de+lideran%C3%A7a." target="_blank" class="btn-primary" style="margin-top:40px;width:100%;">Falar com um Consultor</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RESULTADOS -->
+<section class="resultados" id="resultados">
+  <div class="section-inner">
+    <p class="section-label fade-up">Prova social</p>
+    <h2 class="section-title display fade-up">O que o Ethos<br><em>já entregou</em></h2>
+    <div class="section-rule fade-up"></div>
+
+    <div class="resultados-metrics fade-up">
+      <div class="metric-card">
+        <p class="metric-num display"><span class="count-num" data-target="70" data-suffix="%">0</span></p>
+        <p class="metric-label">de redução de turnover</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-num display"><span class="count-num" data-target="50" data-prefix="+">0</span></p>
+        <p class="metric-label">projetos entregues</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-num display"><span class="count-num" data-target="20" data-prefix="+">0</span></p>
+        <p class="metric-label">anos em educação executiva</p>
+      </div>
+      <div class="metric-card">
+        <p class="metric-num display"><span class="count-num" data-target="5" data-suffix="+">0</span></p>
+        <p class="metric-label">anos de relação contínua</p>
+      </div>
+    </div>
+
+    <div class="depoimentos-grid fade-up">
+      <div class="depoimento">
+        <div class="depo-dash"></div>
+        <p class="depo-text display">"A verdadeira entrega. Nossa estratégia tratada como a própria essência."</p>
+        <div class="depo-author">
+          <strong>Bárbara Pestille</strong>
+          Diretora Administrativa · JB Limpeza e Conservação
+        </div>
+      </div>
+      <div class="depoimento">
+        <div class="depo-dash"></div>
+        <p class="depo-text display">"Didática impecável. Aborda cada complexidade com máxima precisão e controle."</p>
+        <div class="depo-author">
+          <strong>Edinéia da Silva Lima</strong>
+          Coordenadora de RH · Soprano
+        </div>
+      </div>
+    </div>
+
+    <!-- CARROSSEL DE LOGOS -->
+    <div class="social-proof">
+      <p class="section-label" style="text-align:center;margin-bottom:20px;">Empresas onde já entregou resultados</p>
+      <div class="logos-marquee">
+        <div class="logos-track" id="trackLogos">
+          <img src="./assets/logos/advanced-marketing-Dw12YgNp.webp"    alt="Advanced Marketing">
+          <img src="./assets/logos/canto-do-cupim-rYr-GA67.webp"        alt="Canto do Cupim">
+          <img src="./assets/logos/distribuidora-lopes-Am9aPLaD.webp"   alt="Distribuidora Lopes">
+          <img src="./assets/logos/figueira-restaurante-.webp"           alt="Figueira Restaurante">
+          <img src="./assets/logos/imagetech-CEx0pKjI.svg"              alt="Imagetech">
+          <img src="./assets/logos/jb-limpeza-BktZaQtE.webp"            alt="JB Limpeza">
+          <img src="./assets/logos/masseria-KgFqJgEv.avif"              alt="Masseria">
+          <img src="./assets/logos/michellis-burguer-DovtJhW4.webp"     alt="Michellis Burguer">
+          <img src="./assets/logos/pao-e-tal-BVGnCUbg.webp"             alt="Pão e Tal">
+          <img src="./assets/logos/tasto-BXP2uTq9.webp"                 alt="Tasto">
+          <img src="./assets/logos/tecsinapse-DypfI7O9.webp"             alt="Tecsinapse">
+          <img src="./assets/logos/territorio-ristorante.webp"            alt="Territorio Ristorante">
+          <img src="./assets/logos/velutex-BHGLbBya.webp"               alt="Velutex">
+          <img src="./assets/logos/vermelho-grill-DLdXOZ0Y.avif"        alt="Vermelho Grill">
+          <img src="./assets/logos/zornimat-BPKrMGR9.webp"              alt="Zornimat">
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- TURMA ABERTA -->
+<section class="turma" id="turma">
+  <div class="section-inner">
+    <div class="turma-inner">
+      <div>
+        <p class="section-label fade-up" style="color:var(--gold)">Turma Aberta</p>
+        <h2 class="section-title display light fade-up">Pela primeira vez,<br><em>para você.</em></h2>
+        <div class="section-rule fade-up"></div>
+
+        <p class="turma-desc fade-up">Para líderes que querem crescer agora, independente de suas empresas.</p>
+
+        <ul class="turma-list fade-up">
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Encontros presenciais em grupo</p>
+            </div>
+            <div class="accordion-content">
+              <p>Uma imersão presencial ao lado de líderes de setores distintos — saúde, varejo, tecnologia, indústria, alimentação — que compartilham o mesmo compromisso com o desenvolvimento. A diversidade de contextos é intencional: ela força você a enxergar seus desafios de ângulos que sua bolha corporativa jamais ofereceria. Você expandirá um network de valor real enquanto troca vivências autênticas com pessoas que enfrentam desafios idênticos aos seus, mas chegaram a soluções que você ainda não considerou. Muitos participantes relatam que as conexões formadas nos encontros se tornam relações profissionais e pessoais duradouras.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Material exclusivo SYM Gente e Gestão</p>
+            </div>
+            <div class="accordion-content">
+              <p>Todo o arsenal metodológico da SYM Gente e Gestão, construído e validado em mais de 50 projetos corporativos ao longo de 20 anos, estará nas suas mãos. Isso inclui: diagnósticos avançados de perfil comportamental e nível de maturidade de equipe; mapas táticos de resolução de conflitos organizacionais; frameworks de comunicação de autoridade sem autoritarismo; guias práticos de delegação efetiva; e ferramentas de gestão de energia e temperança para líderes sob alta pressão. Materiais que você continua usando anos depois de terminar o programa.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Mentoria individual incluída</p>
+            </div>
+            <div class="accordion-content">
+              <p>É onde o genérico termina e o seu desenvolvimento começa de verdade. Em uma sessão individual reservada exclusivamente para você, Daniela Athia combina sua formação em psicologia com mais de duas décadas de experiência executiva para criar um plano de desenvolvimento personalizado. Ela identifica os padrões que estão limitando sua liderança — os que você vê e os que você não vê — e entrega orientações específicas para sua realidade, sua equipe e seu setor. Não há script. Há escuta clínica e diagnóstico preciso.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Certificado de conclusão</p>
+            </div>
+            <div class="accordion-content">
+              <p>Ao concluir o programa, você recebe o certificado físico da Escola de Caráter Ethos Leadership, emitido pela SYM Gente e Gestão e assinado por Daniela Athia. O documento atesta sua formação nas seis virtudes da liderança virtuosa e a conclusão do ciclo de desenvolvimento com carga horária registrada. Mas, como Daniela costuma dizer: seu verdadeiro certificado será a mudança que as pessoas ao seu redor vão notar antes mesmo de você terminar o programa. O papel confirma o que o comportamento já vai ter demonstrado.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Comunidade de líderes sérios</p>
+            </div>
+            <div class="accordion-content">
+              <p>Ser um líder de alto nível pode ser uma jornada solitária. A maioria das pessoas ao seu redor não compartilha a mesma régua de exigência — e isso isola. No Ethos, você entra para uma comunidade de líderes que levam desenvolvimento a sério e que continuam se encontrando muito além do término do programa. Um grupo onde é seguro admitir incertezas, pedir feedback real e compartilhar avanços sem vaidade. Um conselho não oficial de pessoas que entendem o que você está construindo porque estão construindo algo semelhante.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Vagas limitadas · turma reduzida</p>
+            </div>
+            <div class="accordion-content">
+              <p>O Ethos Leadership não escala porque não foi desenhado para escalar. Cada turma é composta por um número reduzido de participantes — o suficiente para garantir que cada líder seja visto, ouvido e desafiado de forma individual. Essa escolha tem um custo deliberado: significa que há sempre mais interessados do que vagas disponíveis. Significa também que as discussões nos encontros têm profundidade real, que o sigilo das informações corporativas compartilhadas é preservado, e que Daniela Athia conhece o nome, o contexto e o desafio de cada pessoa na sala.</p>
+            </div>
+          </li>
+        </ul>
+
+        <div style="overflow:hidden;height:280px;margin:40px 0;" class="fade-up">
+          <img src="./assets/turma-aberta.webp" alt="Turma Aberta Ethos Leadership" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+        </div>
+
+        <div class="fade-up">
+          <span class="badge-urgencia">Vagas Limitadas · Lista de Espera Aberta</span>
+        </div>
+      </div>
+
+      <div class="turma-right fade-up">
+        <p class="turma-box-label">O que você vai desenvolver</p>
+        <h3 class="turma-box-title display">Escola de Caráter</h3>
+        <p class="turma-box-sub">Não é um treinamento. É uma escola. Uma escola de caráter.</p>
+
+        <ul class="turma-features">
+          <li class="turma-feature">
+            <div class="feature-icon">I</div>
+            As seis virtudes da base filosófica à aplicação prática no seu dia a dia
+          </li>
+          <li class="turma-feature">
+            <div class="feature-icon">II</div>
+            Autoconhecimento real, não o superficial das ferramentas de perfil
+          </li>
+          <li class="turma-feature">
+            <div class="feature-icon">III</div>
+            Ferramentas concretas, feedback, tomada de decisão, gestão de conflitos
+          </li>
+          <li class="turma-feature">
+            <div class="feature-icon">IV</div>
+            Uma comunidade de líderes que levam desenvolvimento a sério
+          </li>
+          <li class="turma-feature">
+            <div class="feature-icon">V</div>
+            Mentorias com Daniela Athia — +20 anos de experiência real
+          </li>
+        </ul>
+
+        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+garantir+minha+vaga+urgente+na+Turma+Aberta." target="_blank" class="btn-primary" style="margin-top:2.5rem;display:inline-flex;width:100%;">Garantir minha vaga agora</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOBRE A FUNDADORA -->
+<section class="sobre-section" id="sobre">
+  <div class="section-inner">
+    <p class="section-label fade-up">A Fundadora</p>
+    <h2 class="section-title display fade-up">Daniela<br><em>Athia</em></h2>
+    <div class="section-rule fade-up"></div>
+
+    <div class="sobre-layout fade-up">
+      <div class="sobre-content">
+        <p class="manifesto-intro" style="margin-bottom:40px;">
+          "Sou Daniela Athia, psicóloga e especialista em desenvolvimento humano, com mais de 20 anos de experiência em gestão estratégica de pessoas."
+        </p>
+        <p class="sobre-text">Desde 2006 ajudo organizações de múltiplos portes a construir gestão e áreas sólidas e estratégicas num desenvolvimento sustentável.</p>
+        <p class="sobre-text">Com mais de 50 projetos conduzidos, formei líderes e fortaleço o nível corporativo em diversas marcas premiadas de altíssima relevância.</p>
+        <p class="sobre-text">Minha visão técnica e sensibilidade humana transformam culturas organizacionais genéricas em reais estruturas de alto crescimento constante e firme.</p>
+      </div>
+
+      <div class="sobre-photo">
+        <img src="./assets/daniela-perfil.webp" alt="Daniela Athia — Fundadora Ethos Leadership" style="width:100%;border-radius:4px;aspect-ratio:3/4;object-fit:cover;object-position:top;">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+  <div class="section-inner">
+    <div class="faq-inner">
+      <p class="section-label fade-up">Tire suas dúvidas</p>
+      <h2 class="section-title display fade-up">Perguntas<br><em>Frequentes</em></h2>
+      <div class="section-rule fade-up"></div>
+
+      <ul class="turma-list fade-up">
+        <li class="turma-item accordion-item">
+          <div class="accordion-header">
+            <span class="js-arrow">→</span>
+            <p>Para quem é o Ethos Leadership?</p>
+          </div>
+          <div class="accordion-content">
+            <p>O Ethos foi desenhado cirurgicamente para empresários inquietos, diretores, líderes e gestores que já perceberam que apenas intuição não basta mais. É para quem já entrega resultados mas sente que o time trava quando sai da sala. Para quem fez cursos de gestão e percebeu que o problema não era técnica — era cultura. Para quem quer parar de apagar incêndios e construir algo que dure. Se você precisa formar times autônomos, dar feedbacks que transformam sem destruir, tomar decisões difíceis com clareza ética e liderar com autoridade que inspira em vez de intimidar — este programa foi forjado para o seu nível de ambição.</p>
+          </div>
+        </li>
+        <li class="turma-item accordion-item">
+          <div class="accordion-header">
+            <span class="js-arrow">→</span>
+            <p>O Método SYM é aplicável em qualquer segmento?</p>
+          </div>
+          <div class="accordion-content">
+            <p>Absolutamente. O Método SYM já foi aplicado em empresas de saúde, varejo, serviços, indústria, tecnologia, agronegócio e alimentação. A razão é simples: independentemente do setor, líderes lideram pessoas — e pessoas funcionam segundo as mesmas leis psicológicas. Precisam de clareza, pertencimento, reconhecimento, limites e propósito. As ferramentas do Ethos abordam a estrutura da influência e da autoridade de forma universal. O que muda entre setores são os contextos nos casos práticos — e isso é exatamente o que a metodologia ativa e os debates da turma proporcionam de forma personalizada para cada participante.</p>
+          </div>
+        </li>
+        <li class="turma-item accordion-item">
+          <div class="accordion-header">
+            <span class="js-arrow">→</span>
+            <p>Haverá certificado de conclusão?</p>
+          </div>
+          <div class="accordion-content">
+            <p>Sim. Ao concluir o programa você recebe o certificado físico e digital da Escola de Caráter Ethos Leadership, com carga horária registrada e assinatura de Daniela Athia. O documento tem validade profissional e pode ser utilizado em processos seletivos, promoções e portfólio executivo. Mas Daniela é direta: o certificado é consequência, não objetivo. Seu verdadeiro atestado será a equipe que você manterá sem precisar controlar, os conflitos que resolverá sem precisar de árbitro, e as metas que atingirá porque as pessoas ao seu redor vão querer — não porque serão obrigadas.</p>
+          </div>
+        </li>
+        <li class="turma-item accordion-item">
+          <div class="accordion-header">
+            <span class="js-arrow">→</span>
+            <p>Como funciona o acompanhamento do curso?</p>
+          </div>
+          <div class="accordion-content">
+            <p>O acompanhamento começa antes do primeiro encontro — com um diagnóstico inicial de liderança que orienta a personalização do seu percurso — e continua depois do último. Durante o programa, você tem acesso às mentorias individuais com Daniela, ao grupo da turma para troca contínua entre os encontros e ao material de apoio para aplicação semanal. Após o encerramento, os participantes mantêm acesso à comunidade do Ethos e são convidados para eventos exclusivos de atualização. O programa não tem uma data de término real: é uma comunidade permanente de líderes em desenvolvimento contínuo.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- OFERTA / PREÇO -->
+<section class="oferta" id="oferta">
+  <div class="section-inner">
+    <div class="oferta-header fade-up" style="text-align:center;margin-bottom:64px;">
+      <p class="section-label" style="text-align:center;display:block;">Investimento</p>
+      <h2 class="section-title display" style="text-align:center;color:var(--charcoal);">Sua vaga no<br><em>Ethos Leadership</em></h2>
+      <div class="section-rule" style="margin:16px auto 0;"></div>
+    </div>
+    <div class="oferta-grid">
+      <div class="oferta-card-main fade-up">
+        <div class="oferta-card-badge">Turma Aberta · Vagas Limitadas</div>
+        <ul class="oferta-includes">
+          <li><span class="oferta-check">✦</span>24h de formação presencial e 6 encontros de alto nível</li>
+          <li><span class="oferta-check">✦</span>2 mentorias individuais ao vivo com Daniela Athia</li>
+          <li><span class="oferta-check">✦</span>Material didático exclusivo SYM físico e digital</li>
+          <li><span class="oferta-check">✦</span>Diagnóstico inicial personalizado de liderança</li>
+          <li><span class="oferta-check">✦</span>Acesso permanente à comunidade de líderes Ethos</li>
+          <li><span class="oferta-check">✦</span>Certificado físico da Escola de Caráter</li>
+        </ul>
+        <div class="oferta-price-area">
+          <span class="oferta-price-label">Investimento total</span>
+          <div class="oferta-price">
+            <span class="oferta-currency">R$</span>
+            <span class="oferta-value">3.000</span>
+          </div>
+          <p class="oferta-price-sub">ou em até <strong>6× R$ 500</strong> no cartão</p>
+        </div>
+        <div class="oferta-urgencia" style="margin-bottom:20px;">
+          <div class="oferta-urg-dot"></div>
+          <div>
+            <p class="oferta-urg-title">Turma com vagas limitadas</p>
+            <p class="oferta-urg-text">O programa é intencionalmente pequeno. Quando as vagas esgotam, a próxima turma não tem data garantida.</p>
+          </div>
+        </div>
+        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+garantir+minha+vaga+no+Ethos+Leadership." target="_blank" class="btn-primary oferta-btn">
+          Garantir minha vaga agora
+        </a>
+        <p class="oferta-disclaimer">Vagas preenchidas por ordem de inscrição.<br>Confirme sua reserva pelo WhatsApp com a Daniela.</p>
+      </div>
+      <div class="oferta-side">
+        <div class="oferta-quote fade-up">
+          <p class="oferta-quote-text display">"O custo de não se desenvolver como líder é pago pela sua equipe, pela sua empresa e por você todo dia."</p>
+          <p class="oferta-quote-author">— Daniela Athia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="#" class="footer-logo">
+        <span>ἤθος</span>
+        Ethos
+      </a>
+      <p class="footer-tagline">Caráter que lidera. Virtude que transforma.</p>
+    </div>
+
+    <div class="footer-nav">
+      <p class="footer-heading">Navegação</p>
+      <div class="footer-links">
+        <a href="#metodo"    class="footer-link">Método SYM</a>
+        <a href="#turma"     class="footer-link">Turma Aberta</a>
+        <a href="#sobre"     class="footer-link">A Fundadora</a>
+        <a href="#faq"       class="footer-link">Perguntas Frequentes</a>
+      </div>
+    </div>
+
+    <div class="footer-contact">
+      <p class="footer-heading">Contato</p>
+      <div class="footer-links">
+        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="footer-link">Inscrição via WhatsApp</a>
+        <a href="https://www.symgente.com.br" target="_blank" class="footer-link">www.symgente.com.br</a>
+        <a href="https://instagram.com/daniathia" target="_blank" class="footer-link">Instagram @daniathia</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; 2026 SYM Gente e Gestão. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
