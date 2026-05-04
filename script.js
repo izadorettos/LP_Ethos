@@ -130,7 +130,7 @@ function submitForm(e) {
   btn.style.color    = '#F5F0E8';
   btn.disabled       = true;
   setTimeout(() => {
-    window.open('https://wa.me/5567999999999?text=Ol%C3%A1%21+Acabei+de+preencher+o+formul%C3%A1rio+do+Ethos+Leadership+e+quero+garantir+minha+vaga.', '_blank');
+    window.open('https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com', '_blank');
   }, 1000);
 }
 

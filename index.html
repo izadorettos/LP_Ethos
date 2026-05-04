@@ -1,537 +1,2741 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ethos Leadership — Caráter que lidera. Virtude que transforma.</title>
 
-<!-- Cormorant Garamond (display) via Google Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethos Leadership — Caráter que lidera. Virtude que transforma.</title>
+
+  <!-- Cormorant Garamond (display) via Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+    rel="stylesheet">
+
+  <style>
+    /* ===== JOST LOCAL ===== */
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 100;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 100;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 200;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 300;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin-ext.woff2") format("woff2");
+      unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF;
+    }
+
+    @font-face {
+      font-family: "Jost";
+      font-style: normal;
+      font-weight: 400;
+      font-display: swap;
+      src: url("./assets/fonts/jost-latin.woff2") format("woff2");
+      unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+FEFF, U+FFFD;
+    }
+
+    /* =====================================================
+   ETHOS LEADERSHIP — PREMIUM STYLESHEET
+   Brandbook:
+     Display  → Cormorant Garamond 300 (títulos, citações, logo)
+     Corpo    → Jost 100/200/300/400
+   Paleta:
+     Charcoal  #1C1A14  Primária escura
+     Olive     #5F573A  Primária verde
+     Gold      #C4A96B  Acento dourado
+     Cream     #F5F0E8  Fundo principal
+     Warm Gray #9A8F72  Textos secundários
+   ===================================================== */
+
+    :root {
+      --charcoal: #1C1A14;
+      --olive: #5F573A;
+      --gold: #C4A96B;
+      --gold-light: #D4BC8A;
+      --cream: #F5F0E8;
+      --cream-dark: #EDE8DC;
+      --warm-gray: #9A8F72;
+      --grad-profundidade: linear-gradient(135deg, var(--charcoal), var(--olive));
+      --grad-transformacao: linear-gradient(90deg, var(--olive), var(--gold));
+    }
+
+    /* ── RESET ── */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    body {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 15px;
+      line-height: 1.7;
+      letter-spacing: 0.02em;
+      background-color: var(--cream);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── TIPOGRAFIA BRANDBOOK ──────────────────────────────
+   Cormorant Garamond → logotipo, h1/h2/h3, citações, taglines
+   Jost Thin 100      → labels, legendas
+   Jost Light 300     → corpo de texto
+   Jost Regular 400   → botões, nav, destaques
+──────────────────────────────────────────────────────── */
+    .display,
+    h1,
+    h2,
+    h3,
+    .hero-title,
+    .section-title,
+    .era-title,
+    .turma-box-title,
+    .metodo-aside-quote,
+    .depo-text,
+    .hero-greek,
+    .hero-tagline,
+    .manifesto-intro,
+    .metodo-item-title,
+    .nav-logo,
+    .footer-logo {
+      font-family: "Cormorant Garamond", "Georgia", serif;
+      font-weight: 300;
+    }
+
+    .section-label,
+    .era-label,
+    .metodo-aside-label,
+    .turma-box-label,
+    .metric-label,
+    .badge-urgencia,
+    .hero-sub {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+    }
+
+    .btn-primary,
+    .btn-outline,
+    .nav-cta,
+    .nav-link,
+    .footer-heading,
+    .js-arrow {
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+    }
+
+
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 5%;
+      background: rgba(28, 26, 20, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border-bottom: 0.5px solid rgba(196, 169, 107, 0.12);
+      z-index: 1000;
+      transition: background 0.3s;
+    }
+
+    .nav-logo {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      gap: 0;
+    }
+
+    .nav-logo span {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      font-weight: 300;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(245, 240, 232, 0.75);
+      transition: color 0.3s;
+    }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
+    .nav-cta {
+      padding: 0.5rem 1.4rem;
+      border: 0.5px solid var(--gold);
+      color: var(--gold);
+      border-radius: 50px;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      transition: background 0.3s, color 0.3s;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+
+    /* ── HAMBURGUER ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      background: none;
+      border: none;
+      outline: none;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--cream);
+      border-radius: 2px;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .nav-hamburger.open span:nth-child(1) {
+      transform: translateY(6.5px) rotate(45deg);
+    }
+
+    .nav-hamburger.open span:nth-child(2) {
+      opacity: 0;
+      transform: scaleX(0);
+    }
+
+    .nav-hamburger.open span:nth-child(3) {
+      transform: translateY(-6.5px) rotate(-45deg);
+    }
+
+    /* ── MENU MOBILE DRAWER ── */
+    .nav-mobile {
+      position: fixed;
+      top: 72px;
+      left: 0;
+      right: 0;
+      background: rgba(28, 26, 20, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 0 5% 40px;
+      z-index: 998;
+      flex-direction: column;
+      gap: 0;
+      border-bottom: 0.5px solid rgba(196, 169, 107, 0.15);
+      display: none;
+      pointer-events: none;
+    }
+
+    .nav-mobile.open {
+      display: flex;
+      pointer-events: all;
+      animation: slideDown 0.3s ease forwards;
+    }
+
+    @keyframes slideDown {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .nav-mobile .nav-link {
+      padding: 18px 0;
+      font-size: 1rem;
+      letter-spacing: 0.08em;
+      border-bottom: 0.5px solid rgba(196, 169, 107, 0.1);
+      color: var(--cream);
+      font-weight: 300;
+      display: block;
+    }
+
+    .nav-mobile .nav-cta {
+      margin-top: 28px;
+      text-align: center;
+      display: block;
+      padding: 14px;
+      font-size: 0.8rem;
+    }
+
+    /* ── BUTTONS ── */
+    .btn-primary {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 0.9rem 2.2rem;
+      background: var(--grad-transformacao);
+      /*color: var(--charcoal);*/
+      color: #fff;
+      font-family: "Jost", sans-serif;
+      font-weight: bold;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(95, 87, 58, 0.3);
+    }
+
+    .btn-outline {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0.9rem 2.2rem;
+      background: transparent;
+      color: var(--cream);
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      border: 0.5px solid rgba(245, 240, 232, 0.3);
+      border-radius: 50px;
+      cursor: pointer;
+      transition: border-color 0.3s, color 0.3s, transform 0.25s;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: translateY(-2px);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      padding: 100px 24px 64px;
+      background: var(--charcoal);
+      overflow: hidden;
+    }
+
+    .hero-bg-text {
+      position: absolute;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(100px, 18vw, 260px);
+      color: rgba(196, 169, 107, 0.04);
+      font-weight: 300;
+      letter-spacing: 0.15em;
+      z-index: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .hero-greek {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--gold);
+      letter-spacing: 0.3em;
+      margin-bottom: 12px;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: clamp(52px, 10vw, 110px);
+      letter-spacing: 0.25em;
+      color: var(--cream);
+      text-transform: uppercase;
+      line-height: 1;
+      z-index: 1;
+    }
+
+    .hero-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      margin: 20px 0;
+      z-index: 1;
+    }
+
+    .hero-divider::before,
+    .hero-divider::after {
+      content: '';
+      width: 60px;
+      height: 0.5px;
+      background: var(--gold);
+      opacity: 0.7;
+    }
+
+    .hero-divider-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--gold);
+      transform: rotate(45deg);
+    }
+
+    .hero-sub {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.45em;
+      color: var(--warm-gray);
+      margin-bottom: 28px;
+      z-index: 1;
+    }
+
+    .hero-tagline {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+      color: rgba(245, 240, 232, 0.78);
+      max-width: 560px;
+      margin-bottom: 48px;
+      z-index: 1;
+      line-height: 1.4;
+    }
+
+    .hero-buttons {
+      z-index: 1;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      z-index: 1;
+    }
+
+    .hero-scroll span {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--warm-gray);
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 40px;
+      background: rgba(154, 143, 114, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scroll-line::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: var(--gold);
+      animation: scrollDown 2s infinite;
+    }
+
+    @keyframes scrollDown {
+      0% {
+        transform: translateY(-100%);
+      }
+
+      100% {
+        transform: translateY(200%);
+      }
+    }
+
+    /* ── MARQUEE ── */
+    .marquee-section {
+      padding: 22px 0;
+      background: var(--charcoal);
+      border-top: 0.5px solid rgba(196, 169, 107, 0.3);
+      border-bottom: 0.5px solid rgba(196, 169, 107, 0.3);
+      overflow: hidden;
+      display: flex;
+      white-space: nowrap;
+    }
+
+    .marquee-track {
+      display: flex;
+      animation: marquee 25s linear infinite;
+      will-change: transform;
+      width: max-content;
+    }
+
+    .marquee-item {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.15em;
+      padding: 0 2rem;
+      color: var(--gold);
+    }
+
+    .marquee-sep {
+      opacity: 0.4;
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ── SEÇÕES GERAIS ── */
+    section {
+      padding: 96px 5%;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .section-label {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--gold);
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      color: var(--charcoal);
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .section-title em {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .section-title.light {
+      color: var(--cream);
+    }
+
+    .section-rule {
+      width: 60px;
+      height: 1px;
+      background: var(--gold);
+      opacity: 0.6;
+      margin-bottom: 48px;
+    }
+
+    /* ── MANIFESTO ── */
+    .manifesto {
+      background: var(--cream);
+    }
+
+    .manifesto-intro {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: var(--olive);
+      max-width: 760px;
+      margin-bottom: 56px;
+      line-height: 1.55;
+      border-left: 2px solid var(--gold);
+      padding-left: 1.5rem;
+    }
+
+    .eras-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(95, 87, 58, 0.15);
+    }
+
+    .era-card {
+      background: var(--olive);
+      padding: 40px 32px;
+      position: relative;
+      overflow: hidden;
+      transition: background 0.3s;
+    }
+
+    .era-card::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 32px;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      transition: width 0.4s ease;
+    }
+
+    .era-card:hover::after {
+      width: calc(100% - 64px);
+    }
+
+    .era-card:hover {
+      background: #4e4830;
+    }
+
+    .era-num {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 5rem;
+      color: rgba(245, 240, 232, 0.08);
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .era-label {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .era-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 1.65rem;
+      color: var(--cream);
+      margin-bottom: 12px;
+    }
+
+    .era-text {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: rgba(245, 240, 232, 0.7);
+      line-height: 1.75;
+    }
+
+    /* ── MÉTODO SYM ── */
+    .metodo {
+      background: var(--cream-dark);
+    }
+
+    .metodo-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .metodo-list,
+    .turma-list {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .accordion-item {
+      border-bottom: 0.5px solid rgba(95, 87, 58, 0.2);
+    }
+
+    .accordion-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.2rem 0;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .js-arrow {
+      display: inline-block;
+      color: var(--gold);
+      font-family: "Jost", sans-serif;
+      font-size: 1.1rem;
+      transition: transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+      transform-origin: center;
+      flex-shrink: 0;
+      line-height: 1;
+    }
+
+    .metodo-item-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 1.25rem;
+      color: var(--charcoal);
+      margin: 0;
+      transition: color 0.3s;
+    }
+
+    .turma-item p:not(.accordion-content p) {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--cream);
+      margin: 0;
+      transition: color 0.3s;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      padding: 0 0 0 2.2rem;
+      transition: max-height 0.4s cubic-bezier(0, 1, 0, 1),
+        opacity 0.3s ease,
+        padding 0.3s ease;
+    }
+
+    .accordion-item.active .accordion-content {
+      max-height: 600px;
+      opacity: 1;
+      padding-bottom: 1.2rem;
+      transition: max-height 0.5s cubic-bezier(0.2, 0.8, 0.2, 1),
+        opacity 0.4s ease,
+        padding 0.3s ease;
+    }
+
+    .accordion-item.active .js-arrow {
+      transform: rotate(90deg);
+    }
+
+    .accordion-item.active .metodo-item-title,
+    .accordion-item.active .turma-item p:not(.accordion-content p) {
+      color: var(--gold);
+    }
+
+    .metodo-item-desc,
+    .accordion-content p {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: var(--warm-gray);
+      line-height: 1.75;
+    }
+
+    .metodo-aside {
+      position: sticky;
+      top: 88px;
+    }
+
+    .metodo-aside-box {
+      background: var(--charcoal);
+      padding: 2.5rem;
+      border-left: 3px solid var(--gold);
+    }
+
+    .metodo-aside-label {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .metodo-aside-quote {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.35rem;
+      color: var(--cream);
+      line-height: 1.4;
+    }
+
+    /* ── RESULTADOS ── */
+    .resultados {
+      background: var(--cream);
+      padding-bottom: 0;
+    }
+
+    .resultados-metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1px;
+      background: rgba(95, 87, 58, 0.15);
+      margin-bottom: 56px;
+    }
+
+    .metric-card {
+      background: var(--cream);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    .metric-num {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 3.5rem;
+      color: var(--charcoal);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .metric-num span {
+      color: var(--gold);
+      font-size: 1.5rem;
+    }
+
+    .metric-label {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--warm-gray);
+    }
+
+    .depoimentos-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: rgba(95, 87, 58, 0.15);
+      margin-bottom: 0;
+    }
+
+    .depoimento {
+      background: var(--cream);
+      padding: 40px 32px;
+      border-top: 2px solid var(--gold);
+    }
+
+    .depo-dash {
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .depo-text {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.15rem;
+      color: var(--charcoal);
+      line-height: 1.55;
+      margin-bottom: 1.5rem;
+    }
+
+    .depo-author {
+      font-family: "Jost", sans-serif;
+      font-weight: 200;
+      font-size: 0.78rem;
+      color: var(--warm-gray);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .depo-author strong {
+      font-weight: 400;
+      color: var(--charcoal);
+    }
+
+    /* Logos parceiros */
+    .social-proof {
+      padding: 48px 0 16px;
+      overflow: hidden;
+    }
+
+    .logos-marquee {
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .logos-track {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+      animation: marquee-logos 25s linear infinite;
+      padding-left: 4rem;
+      will-change: transform;
+      width: max-content;
+    }
+
+    .logos-track img {
+      height: 44px;
+      object-fit: contain;
+      max-width: 140px;
+      opacity: 1;
+      transition: opacity 0.3s, filter 0.3s;
+    }
+
+    .logos-track img:hover {
+      opacity: 1;
+      filter: grayscale(0%);
+    }
+
+    @keyframes marquee-logos {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .logos-track,
+      .marquee-track {
+        animation-duration: 22s !important;
+        gap: 2rem;
+      }
+    }
+
+    /* ── TURMA ABERTA ── */
+    .turma {
+      background: var(--olive);
+    }
+
+    .turma-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .turma-desc {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: rgba(245, 240, 232, 0.7);
+      margin-bottom: 2.5rem;
+    }
+
+    .turma-list .accordion-item {
+      border-color: rgba(245, 240, 232, 0.15);
+    }
+
+    .turma-right {
+      background: var(--cream);
+      padding: 3rem;
+      border: 0.5px solid rgba(95, 87, 58, 0.2);
+    }
+
+    .turma-box-label {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+
+    .turma-box-title {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+    }
+
+    .turma-box-sub {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.88rem;
+      color: var(--warm-gray);
+      margin-bottom: 2rem;
+    }
+
+    .turma-features {
+      display: flex;
+      flex-direction: column;
+      gap: 1.2rem;
+    }
+
+    .turma-feature {
+      display: flex;
+      gap: 1.2rem;
+      align-items: flex-start;
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      border-bottom: 0.5px dashed rgba(95, 87, 58, 0.2);
+      padding-bottom: 1.2rem;
+    }
+
+    .feature-icon {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--gold);
+      min-width: 20px;
+      line-height: 1.5;
+    }
+
+    .badge-urgencia {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 22px;
+      background: rgba(220, 38, 38, 0.12);
+      border: 1px solid #dc2626;
+      color: #f5f0e8;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      border-radius: 50px;
+      animation: urgencia-pulse 2s ease-in-out infinite;
+    }
+
+    .badge-urgencia::before {
+      content: '';
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #fbbf24;
+      border-radius: 50%;
+      flex-shrink: 0;
+      animation: dot-blink 1s ease-in-out infinite;
+    }
+
+    @keyframes urgencia-pulse {
+
+      0%,
+      100% {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 0 rgba(220, 38, 38, 0);
+      }
+
+      50% {
+        border-color: #fbbf24;
+        box-shadow: 0 0 10px 2px rgba(251, 191, 36, 0.25);
+      }
+    }
+
+    @keyframes dot-blink {
+
+      0%,
+      100% {
+        opacity: 1;
+        background: #fbbf24;
+      }
+
+      50% {
+        opacity: 0.4;
+        background: #dc2626;
+      }
+    }
+
+    /* ── SOBRE A FUNDADORA ── */
+    .sobre-section {
+      background: var(--cream);
+    }
+
+    .sobre-layout {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .sobre-text {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.95rem;
+      color: var(--warm-gray);
+      margin-bottom: 1.2rem;
+      line-height: 1.75;
+    }
+
+    .sobre-photo img {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: -16px 16px 0 var(--gold);
+      transition: transform 0.4s ease;
+    }
+
+    .sobre-photo img:hover {
+      transform: scale(1.02);
+    }
+
+    .form-wa-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 0.88rem;
+      color: var(--gold);
+      transition: gap 0.3s;
+    }
+
+    .form-wa-link:hover {
+      gap: 14px;
+    }
+
+    .form-wa-link svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--gold);
+      flex-shrink: 0;
+    }
+
+    /* ── FAQ ── */
+    .faq {
+      background: var(--charcoal);
+      padding: 96px 5%;
+    }
+
+    .faq .section-title {
+      color: var(--cream);
+    }
+
+    .faq .section-label {
+      color: var(--gold);
+    }
+
+    .faq .accordion-item {
+      border-color: rgba(245, 240, 232, 0.12);
+    }
+
+    .faq .accordion-header p {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      color: var(--cream);
+      margin: 0;
+      transition: color 0.3s;
+    }
+
+    .faq .accordion-item.active .accordion-header p {
+      color: var(--gold);
+    }
+
+    .faq .accordion-content p {
+      color: rgba(245, 240, 232, 0.6);
+    }
+
+    .faq-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    /* ── FOOTER ── */
+    .site-footer {
+      background: var(--charcoal);
+      color: var(--cream);
+      padding: 80px 5% 36px;
+      border-top: 0.5px solid rgba(196, 169, 107, 0.15);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-bottom: 48px;
+    }
+
+    .footer-logo {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 1.25rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--cream);
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-logo span {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 0.72rem;
+      color: var(--gold);
+      letter-spacing: 0.2em;
+      font-weight: 300;
+    }
+
+    .footer-tagline {
+      font-family: "Jost", sans-serif;
+      font-weight: 200;
+      font-size: 0.85rem;
+      color: var(--warm-gray);
+      line-height: 1.5;
+    }
+
+    .footer-heading {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-link {
+      font-family: "Jost", sans-serif;
+      font-weight: 200;
+      font-size: 0.8rem;
+      color: var(--warm-gray);
+      transition: color 0.3s;
+    }
+
+    .footer-link:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 28px;
+      border-top: 0.5px solid rgba(245, 240, 232, 0.08);
+      text-align: center;
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.7rem;
+      color: rgba(154, 143, 114, 0.45);
+    }
+
+    /* ── ANIMAÇÕES ── */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.2, 0.8, 0.2, 1),
+        transform 0.75s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── RESPONSIVO ────────────────────────────────── */
+
+    /* Tablet largo */
+    @media (max-width: 1100px) {
+      .metodo-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .metodo-aside {
+        position: static;
+      }
+
+      .resultados-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      section {
+        padding: 72px 5%;
+      }
+
+      .faq {
+        padding: 72px 5%;
+      }
+
+      .nav-links,
+      .nav-cta {
+        display: none;
+      }
+
+      .nav-hamburger {
+        display: flex;
+      }
+
+      .eras-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .turma-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .sobre-layout {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+      }
+
+      .depoimentos-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      section {
+        padding: 56px 5%;
+      }
+
+      .faq {
+        padding: 56px 5%;
+      }
+
+      nav {
+        padding: 0 5%;
+        height: 64px;
+      }
+
+      .nav-mobile {
+        top: 64px;
+      }
+
+      .hero {
+        padding: 80px 5% 48px;
+      }
+
+      .hero-title {
+        font-size: clamp(44px, 13vw, 72px);
+        letter-spacing: 0.15em;
+      }
+
+      .hero-tagline {
+        margin-bottom: 32px;
+      }
+
+      .hero-scroll {
+        display: none;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .btn-primary,
+      .btn-outline {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+
+      .resultados-metrics {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .metric-card {
+        padding: 28px 16px;
+      }
+
+      .metric-num {
+        font-size: 2.8rem;
+      }
+
+      .sobre-photo {
+        order: -1;
+      }
+
+      .footer-top {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      /* WhatsApp só ícone */
+
+      .turma-right {
+        padding: 2rem;
+      }
+
+      .era-card {
+        padding: 28px 20px;
+      }
+
+      .depoimento {
+        padding: 28px 20px;
+      }
+
+      .metodo-aside-box {
+        padding: 2rem;
+      }
+
+      .section-rule {
+        margin-bottom: 32px;
+      }
+    }
+
+    /* Mobile pequeno */
+    @media (max-width: 390px) {
+      section {
+        padding: 48px 4%;
+      }
+
+      .faq {
+        padding: 48px 4%;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .hero-title {
+        font-size: clamp(40px, 12vw, 58px);
+      }
+
+      nav {
+        padding: 0 4%;
+      }
+    }
+
+
+    /* ── OFERTA / PREÇO ── */
+    .oferta {
+      background: var(--cream);
+      padding: 96px 5%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .oferta-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 52px;
+      align-items: start;
+    }
+
+    .oferta-card-main {
+      background: var(--charcoal);
+      border: 0.5px solid rgba(196, 169, 107, 0.2);
+      padding: 52px 48px;
+      position: relative;
+    }
+
+    .oferta-card-main::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 52px;
+      width: 96px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .oferta-card-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(220, 38, 38, 0.12);
+      border: 0.5px solid #dc2626;
+      color: #f5f0e8;
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      border-radius: 50px;
+      margin-bottom: 40px;
+      animation: urgencia-pulse 2s ease-in-out infinite;
+    }
+
+    .oferta-card-badge::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #fbbf24;
+      border-radius: 50%;
+      animation: dot-blink 1s ease-in-out infinite;
+    }
+
+    .oferta-price-area {
+      margin-bottom: 40px;
+      padding-bottom: 36px;
+      border-bottom: 0.5px solid rgba(196, 169, 107, 0.12);
+    }
+
+    .oferta-price-label {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: rgba(245, 240, 232, 0.55);
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .oferta-price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 12px;
+      line-height: 1;
+    }
+
+    .oferta-currency {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: var(--gold);
+    }
+
+    .oferta-value {
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 300;
+      font-size: clamp(3.5rem, 6vw, 5.5rem);
+      color: var(--cream);
+      letter-spacing: -0.02em;
+    }
+
+    .oferta-price-sub {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: rgba(245, 240, 232, 0.6);
+      line-height: 1.5;
+    }
+
+    .oferta-price-sub strong {
+      font-weight: 400;
+      color: var(--gold);
+    }
+
+    .oferta-includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 44px;
+    }
+
+    .oferta-includes li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.9rem;
+      color: rgba(245, 240, 232, 0.82);
+      line-height: 1.5;
+    }
+
+    .oferta-check {
+      color: var(--gold);
+      font-size: 0.6rem;
+      margin-top: 4px;
+      flex-shrink: 0;
+    }
+
+    .oferta-btn {
+      width: 100%;
+      padding: 1.1rem 2rem;
+      font-size: 0.82rem;
+      letter-spacing: 0.15em;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .oferta-disclaimer {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.68rem;
+      letter-spacing: 0.04em;
+      color: rgba(245, 240, 232, 0.35);
+      text-align: center;
+      line-height: 1.7;
+    }
+
+    .oferta-side {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-top: 4px;
+    }
+
+    .oferta-urgencia {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 28px 24px;
+      background: rgba(220, 38, 38, 0.06);
+      border: 0.5px solid rgba(220, 38, 38, 0.25);
+    }
+
+    .oferta-urg-dot {
+      width: 9px;
+      height: 9px;
+      background: #dc2626;
+      border-radius: 50%;
+      flex-shrink: 0;
+      margin-top: 5px;
+      animation: dot-blink 1s ease-in-out infinite;
+    }
+
+    .oferta-urg-title {
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #f87171;
+      margin-bottom: 8px;
+    }
+
+    .oferta-urg-text {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: rgba(245, 240, 232, 0.6);
+      line-height: 1.7;
+    }
+
+    .oferta-garantia {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 28px 24px;
+      background: rgba(196, 169, 107, 0.05);
+      border: 0.5px solid rgba(196, 169, 107, 0.18);
+    }
+
+    .oferta-garantia-icon {
+      width: 40px;
+      height: 40px;
+      border: 0.5px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--gold);
+      flex-shrink: 0;
+    }
+
+    .oferta-garantia-title {
+      font-family: "Jost", sans-serif;
+      font-weight: 400;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .oferta-garantia-text {
+      font-family: "Jost", sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      color: rgba(245, 240, 232, 0.55);
+      line-height: 1.7;
+    }
+
+    .oferta-quote {
+      padding: 28px 24px;
+      border-left: 2px solid var(--gold);
+    }
+
+    .oferta-quote-text {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: 1.2rem;
+      color: var(--olive);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    .oferta-quote-author {
+      font-family: "Jost", sans-serif;
+      font-weight: 100;
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    @media (max-width: 900px) {
+      .oferta-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .oferta-card-main {
+        padding: 32px 24px;
+      }
+
+      .oferta-value {
+        font-size: 3.5rem;
+      }
+
+      .oferta-urgencia,
+      .oferta-garantia {
+        padding: 20px 18px;
+        gap: 14px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 
-<!-- NAVEGAÇÃO -->
-<nav>
-  <a href="#" class="nav-logo">
-    <span>ἤθος</span>
-    Ethos
-  </a>
+  <!-- NAVEGAÇÃO -->
+  <nav>
+    <a href="#" class="nav-logo">
+      <span>ἤθος</span>
+      Ethos
+    </a>
 
-  <!-- Links desktop -->
-  <div class="nav-links">
-    <a href="#metodo"    class="nav-link">Método SYM</a>
-    <a href="#turma"     class="nav-link">Turma Aberta</a>
-    <a href="#sobre"     class="nav-link">A Fundadora</a>
-    <a href="#oferta"   class="nav-link">Investimento</a>
-    <a href="#faq"       class="nav-link">Perguntas Frequentes</a>
-  </div>
+    <!-- Links desktop -->
+    <div class="nav-links">
+      <a href="#metodo" class="nav-link">Método SYM</a>
+      <a href="#turma" class="nav-link">Turma Aberta</a>
+      <a href="#sobre" class="nav-link">A Fundadora</a>
+      <a href="#oferta" class="nav-link">Investimento</a>
+      <a href="#faq" class="nav-link">Perguntas Frequentes</a>
+    </div>
 
-  <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="nav-cta">Quero minha vaga</a>
+    <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com" target="_blank" class="nav-cta">Quero minha vaga</a>
 
-  <!-- Hamburguer mobile -->
-  <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+    <!-- Hamburguer mobile -->
+    <button class="nav-hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<!-- Menu mobile drawer -->
-<nav class="nav-mobile" id="navMobile" aria-hidden="true">
-  <a href="#metodo"    class="nav-link" onclick="closeMenu()">Método SYM</a>
-  <a href="#turma"     class="nav-link" onclick="closeMenu()">Turma Aberta</a>
-  <a href="#sobre"     class="nav-link" onclick="closeMenu()">A Fundadora</a>
-  <a href="#oferta"   class="nav-link" onclick="closeMenu()">Investimento</a>
-  <a href="#faq"       class="nav-link" onclick="closeMenu()">Perguntas Frequentes</a>
-  <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="nav-cta" onclick="closeMenu()">Quero minha vaga</a>
-</nav>
+  <!-- Menu mobile drawer -->
+  <nav class="nav-mobile" id="navMobile" aria-hidden="true">
+    <a href="#metodo" class="nav-link" onclick="closeMenu()">Método SYM</a>
+    <a href="#turma" class="nav-link" onclick="closeMenu()">Turma Aberta</a>
+    <a href="#sobre" class="nav-link" onclick="closeMenu()">A Fundadora</a>
+    <a href="#oferta" class="nav-link" onclick="closeMenu()">Investimento</a>
+    <a href="#faq" class="nav-link" onclick="closeMenu()">Perguntas Frequentes</a>
+    <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com" target="_blank" class="nav-cta" onclick="closeMenu()">Quero minha vaga</a>
+  </nav>
 
-<!-- HERO -->
-<section class="hero" id="inicio">
-  <div class="hero-bg-text">ETHOS</div>
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg-text">ETHOS</div>
 
-  <p class="hero-greek">ἤθος</p>
-  <h1 class="hero-title display">ETHOS</h1>
-  <div class="hero-divider">
-    <div class="hero-divider-dot"></div>
-  </div>
-  <p class="hero-sub">Leadership</p>
-  <p class="hero-tagline display">Caráter que lidera. Virtude que transforma.</p>
+    <p class="hero-greek">ἤθος</p>
+    <h1 class="hero-title display">ETHOS</h1>
+    <div class="hero-divider">
+      <div class="hero-divider-dot"></div>
+    </div>
+    <p class="hero-sub">Leadership</p>
+    <p class="hero-tagline display">Caráter que lidera. Virtude que transforma.</p>
 
-  <div class="hero-buttons">
-    <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="btn-primary">Quero minha vaga</a>
-  </div>
+    <div class="hero-buttons">
+      <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com" target="_blank" class="btn-primary">Quero minha vaga</a>
+    </div>
 
-  <div class="hero-scroll">
-    <span>Rolar</span>
-    <div class="scroll-line"></div>
-  </div>
-</section>
+    <div class="hero-scroll">
+      <span>Rolar</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-<!-- MARQUEE — itens únicos, JS duplica para loop suave -->
-<div class="marquee-section">
-  <div class="marquee-track" id="trackPhrases">
-    <span class="marquee-item">Prudência</span>
-    <span class="marquee-item marquee-sep">·</span>
-    <span class="marquee-item">Justiça</span>
-    <span class="marquee-item marquee-sep">·</span>
-    <span class="marquee-item">Fortaleza</span>
-    <span class="marquee-item marquee-sep">·</span>
-    <span class="marquee-item">Temperança</span>
-    <span class="marquee-item marquee-sep">·</span>
-    <span class="marquee-item">Humildade</span>
-    <span class="marquee-item marquee-sep">·</span>
-    <span class="marquee-item">Magnanimidade</span>
-    <span class="marquee-item marquee-sep">·</span>
-  </div>
-</div>
-
-<!-- MANIFESTO -->
-<section class="manifesto" id="manifesto">
-  <div class="section-inner">
-    <p class="section-label fade-up">O Manifesto</p>
-    <h2 class="section-title display fade-up">De onde viemos.<br><em>Para onde vamos.</em></h2>
-    <div class="section-rule fade-up"></div>
-
-    <p class="manifesto-intro fade-up">
-      "A liderança baseada no medo perdeu espaço. O futuro exige caráter e virtuosismo."
-    </p>
-
-    <div class="eras-grid fade-up">
-      <div class="era-card">
-        <div class="era-num display">01</div>
-        <p class="era-label">Era 1</p>
-        <h3 class="era-title display">O Tubarão</h3>
-        <p class="era-text">Performance a qualquer custo. Times oprimidos por medo.</p>
-      </div>
-      <div class="era-card">
-        <div class="era-num display">02</div>
-        <p class="era-label">Era 2</p>
-        <h3 class="era-title display">O Omissivo</h3>
-        <p class="era-text">Líderes sem autoridade. Gentileza sem firmeza não é virtude, mas omissão.</p>
-      </div>
-      <div class="era-card">
-        <div class="era-num display">03</div>
-        <p class="era-label">Era 3</p>
-        <h3 class="era-title display">O Virtuoso</h3>
-        <p class="era-text">O equilíbrio exato. Serve porque forma, exige porque acredita em resultados.</p>
-      </div>
+  <!-- MARQUEE — itens únicos, JS duplica para loop suave -->
+  <div class="marquee-section">
+    <div class="marquee-track" id="trackPhrases">
+      <span class="marquee-item">Prudência</span>
+      <span class="marquee-item marquee-sep">·</span>
+      <span class="marquee-item">Justiça</span>
+      <span class="marquee-item marquee-sep">·</span>
+      <span class="marquee-item">Fortaleza</span>
+      <span class="marquee-item marquee-sep">·</span>
+      <span class="marquee-item">Temperança</span>
+      <span class="marquee-item marquee-sep">·</span>
+      <span class="marquee-item">Humildade</span>
+      <span class="marquee-item marquee-sep">·</span>
+      <span class="marquee-item">Magnanimidade</span>
+      <span class="marquee-item marquee-sep">·</span>
     </div>
   </div>
-</section>
 
-<!-- MÉTODO -->
-<section class="metodo" id="metodo">
-  <div class="section-inner">
-    <div class="metodo-grid">
-      <div>
-        <p class="section-label fade-up">Como funciona</p>
-        <h2 class="section-title display fade-up">O Método<br><em>SYM</em></h2>
-        <div class="section-rule fade-up"></div>
+  <!-- MANIFESTO -->
+  <section class="manifesto" id="manifesto">
+    <div class="section-inner">
+      <p class="section-label fade-up">O Manifesto</p>
+      <h2 class="section-title display fade-up">De onde viemos.<br><em>Para onde vamos.</em></h2>
+      <div class="section-rule fade-up"></div>
 
-        <ul class="metodo-list fade-up">
-          <li class="metodo-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p class="metodo-item-title display">Metodologia ativa</p>
-            </div>
-            <div class="accordion-content">
-              <p class="metodo-item-desc">No Ethos Leadership, você não é um espectador passivo. Cada encontro é construído para que você seja o protagonista do próprio desenvolvimento. Utilizamos dinâmicas de role-play, simulações de situações corporativas reais e debates estruturados para que o aprendizado aconteça pelo fazer — não pelo ouvir. A metodologia ativa parte do pressuposto aristotélico de que o caráter se forma na prática repetida: não basta saber o que é prudência, é preciso exercitá-la sob pressão. Você sairá de cada módulo com uma entrega concreta aplicável na semana seguinte.</p>
-            </div>
-          </li>
-          <li class="metodo-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p class="metodo-item-title display">Aprendizagem baseada em problemas</p>
-            </div>
-            <div class="accordion-content">
-              <p class="metodo-item-desc">Esqueça cases de Harvard ou exemplos genéricos de gestão. Aqui trabalhamos exclusivamente com situações extraídas da trincheira das empresas brasileiras: o gestor que não consegue demitir quem precisa ser demitido, a equipe que entrega só quando o líder está presente, o conflito entre dois líderes sênior que paralisa departamentos inteiros. Cada problema trazido para a sala passa por análise filosófica — identificando qual virtude está ausente ou em excesso — e por análise prática, com ferramentas e planos de ação testados em campo. Você aprende resolvendo, não memorizando.</p>
-            </div>
-          </li>
-          <li class="metodo-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p class="metodo-item-title display">24h de formação presencial</p>
-            </div>
-            <div class="accordion-content">
-              <p class="metodo-item-desc">São 6 encontros presenciais de 4 horas cada, distribuídos ao longo do programa, em ritmo que permite absorver, aplicar no trabalho e retornar com novas perguntas. O formato presencial não é acidente — é filosofia. A transformação de caráter exige fricção real, olho no olho, discussão que desacomoda. Cada sessão tem estrutura definida: abertura reflexiva, conteúdo aplicado, laboratório prático e encerramento com compromisso individual. O ambiente é deliberadamente pequeno e seguro para que conversas difíceis aconteçam com profundidade.</p>
-            </div>
-          </li>
-          <li class="metodo-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p class="metodo-item-title display">2 mentorias online ao vivo</p>
-            </div>
-            <div class="accordion-content">
-              <p class="metodo-item-desc">Dois momentos exclusivos de direcionamento individual com Daniela Athia, agendados em datas estratégicas do programa: uma na fase inicial, para calibrar suas metas e identificar os padrões de comportamento que precisam ser trabalhados com urgência; e outra na fase final, para consolidar os avanços, mapear os pontos cegos que persistem e construir um plano de continuidade pós-programa. Daniela mergulha na sua realidade específica — seu setor, sua equipe, suas tensões — e entrega orientações cirúrgicas que vão muito além do conteúdo coletivo dos encontros presenciais.</p>
-            </div>
-          </li>
-          <li class="metodo-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p class="metodo-item-title display">Material didático exclusivo</p>
-            </div>
-            <div class="accordion-content">
-              <p class="metodo-item-desc">Você recebe um conjunto de materiais desenvolvido e refinado ao longo de mais de 20 anos de atuação da SYM Gente e Gestão dentro de empresas reais. O arsenal inclui: apostilas temáticas com base filosófica e aplicação prática para cada uma das seis virtudes; frameworks de diagnóstico de cultura organizacional; ferramentas de avaliação comportamental de equipes; guias de feedback estruturado por nível de maturidade do colaborador; mapas de gestão de conflitos; e roteiros de reuniões de alta performance. Todo material é físico e digital, para uso imediato e consulta contínua após o programa.</p>
-            </div>
-          </li>
-        </ul>
-      </div>
+      <p class="manifesto-intro fade-up">
+        "A liderança baseada no medo perdeu espaço. O futuro exige caráter e virtuosismo."
+      </p>
 
-      <div class="metodo-aside fade-up">
-        <div class="metodo-aside-box">
-          <p class="metodo-aside-label">O resultado</p>
-          <p class="metodo-aside-quote display">"O resultado não é um líder que sabe mais. É um líder que é mais."</p>
+      <div class="eras-grid fade-up">
+        <div class="era-card">
+          <div class="era-num display">01</div>
+          <p class="era-label">Era 1</p>
+          <h3 class="era-title display">O Tubarão</h3>
+          <p class="era-text">Performance a qualquer custo. Times oprimidos por medo.</p>
         </div>
-        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Gostaria+de+fazer+um+diagn%C3%B3stico+do+meu+n%C3%ADvel+de+lideran%C3%A7a." target="_blank" class="btn-primary" style="margin-top:40px;width:100%;">Falar com um Consultor</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- RESULTADOS -->
-<section class="resultados" id="resultados">
-  <div class="section-inner">
-    <p class="section-label fade-up">Prova social</p>
-    <h2 class="section-title display fade-up">O que o Ethos<br><em>já entregou</em></h2>
-    <div class="section-rule fade-up"></div>
-
-    <div class="resultados-metrics fade-up">
-      <div class="metric-card">
-        <p class="metric-num display"><span class="count-num" data-target="70" data-suffix="%">0</span></p>
-        <p class="metric-label">de redução de turnover</p>
-      </div>
-      <div class="metric-card">
-        <p class="metric-num display"><span class="count-num" data-target="50" data-prefix="+">0</span></p>
-        <p class="metric-label">projetos entregues</p>
-      </div>
-      <div class="metric-card">
-        <p class="metric-num display"><span class="count-num" data-target="20" data-prefix="+">0</span></p>
-        <p class="metric-label">anos em educação executiva</p>
-      </div>
-      <div class="metric-card">
-        <p class="metric-num display"><span class="count-num" data-target="5" data-suffix="+">0</span></p>
-        <p class="metric-label">anos de relação contínua</p>
-      </div>
-    </div>
-
-    <div class="depoimentos-grid fade-up">
-      <div class="depoimento">
-        <div class="depo-dash"></div>
-        <p class="depo-text display">"A verdadeira entrega. Nossa estratégia tratada como a própria essência."</p>
-        <div class="depo-author">
-          <strong>Bárbara Pestille</strong>
-          Diretora Administrativa · JB Limpeza e Conservação
+        <div class="era-card">
+          <div class="era-num display">02</div>
+          <p class="era-label">Era 2</p>
+          <h3 class="era-title display">O Omissivo</h3>
+          <p class="era-text">Líderes sem autoridade. Gentileza sem firmeza não é virtude, mas omissão.</p>
         </div>
-      </div>
-      <div class="depoimento">
-        <div class="depo-dash"></div>
-        <p class="depo-text display">"Didática impecável. Aborda cada complexidade com máxima precisão e controle."</p>
-        <div class="depo-author">
-          <strong>Edinéia da Silva Lima</strong>
-          Coordenadora de RH · Soprano
+        <div class="era-card">
+          <div class="era-num display">03</div>
+          <p class="era-label">Era 3</p>
+          <h3 class="era-title display">O Virtuoso</h3>
+          <p class="era-text">O equilíbrio exato. Serve porque forma, exige porque acredita em resultados.</p>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- CARROSSEL DE LOGOS -->
-    <div class="social-proof">
-      <p class="section-label" style="text-align:center;margin-bottom:20px;">Empresas onde já entregou resultados</p>
-      <div class="logos-marquee">
-        <div class="logos-track" id="trackLogos">
-          <img src="./assets/logos/advanced-marketing-Dw12YgNp.webp"    alt="Advanced Marketing">
-          <img src="./assets/logos/canto-do-cupim-rYr-GA67.webp"        alt="Canto do Cupim">
-          <img src="./assets/logos/distribuidora-lopes-Am9aPLaD.webp"   alt="Distribuidora Lopes">
-          <img src="./assets/logos/figueira-restaurante-.webp"           alt="Figueira Restaurante">
-          <img src="./assets/logos/imagetech-CEx0pKjI.svg"              alt="Imagetech">
-          <img src="./assets/logos/jb-limpeza-BktZaQtE.webp"            alt="JB Limpeza">
-          <img src="./assets/logos/masseria-KgFqJgEv.avif"              alt="Masseria">
-          <img src="./assets/logos/michellis-burguer-DovtJhW4.webp"     alt="Michellis Burguer">
-          <img src="./assets/logos/pao-e-tal-BVGnCUbg.webp"             alt="Pão e Tal">
-          <img src="./assets/logos/tasto-BXP2uTq9.webp"                 alt="Tasto">
-          <img src="./assets/logos/tecsinapse-DypfI7O9.webp"             alt="Tecsinapse">
-          <img src="./assets/logos/territorio-ristorante.webp"            alt="Territorio Ristorante">
-          <img src="./assets/logos/velutex-BHGLbBya.webp"               alt="Velutex">
-          <img src="./assets/logos/vermelho-grill-DLdXOZ0Y.avif"        alt="Vermelho Grill">
-          <img src="./assets/logos/zornimat-BPKrMGR9.webp"              alt="Zornimat">
+  <!-- MÉTODO -->
+  <section class="metodo" id="metodo">
+    <div class="section-inner">
+      <div class="metodo-grid">
+        <div>
+          <p class="section-label fade-up">Como funciona</p>
+          <h2 class="section-title display fade-up">O Método<br><em>SYM</em></h2>
+          <div class="section-rule fade-up"></div>
+
+          <ul class="metodo-list fade-up">
+            <li class="metodo-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p class="metodo-item-title display">Metodologia ativa</p>
+              </div>
+              <div class="accordion-content">
+                <p class="metodo-item-desc">No Ethos Leadership, você não é um espectador passivo. Cada encontro é
+                  construído para que você seja o protagonista do próprio desenvolvimento. Utilizamos dinâmicas de
+                  role-play, simulações de situações corporativas reais e debates estruturados para que o aprendizado
+                  aconteça pelo fazer — não pelo ouvir. A metodologia ativa parte do pressuposto aristotélico de que o
+                  caráter se forma na prática repetida: não basta saber o que é prudência, é preciso exercitá-la sob
+                  pressão. Você sairá de cada módulo com uma entrega concreta aplicável na semana seguinte.</p>
+              </div>
+            </li>
+            <li class="metodo-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p class="metodo-item-title display">Aprendizagem baseada em problemas</p>
+              </div>
+              <div class="accordion-content">
+                <p class="metodo-item-desc">Esqueça cases de Harvard ou exemplos genéricos de gestão. Aqui trabalhamos
+                  exclusivamente com situações extraídas da trincheira das empresas brasileiras: o gestor que não
+                  consegue demitir quem precisa ser demitido, a equipe que entrega só quando o líder está presente, o
+                  conflito entre dois líderes sênior que paralisa departamentos inteiros. Cada problema trazido para a
+                  sala passa por análise filosófica — identificando qual virtude está ausente ou em excesso — e por
+                  análise prática, com ferramentas e planos de ação testados em campo. Você aprende resolvendo, não
+                  memorizando.</p>
+              </div>
+            </li>
+            <li class="metodo-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p class="metodo-item-title display">24h de formação presencial</p>
+              </div>
+              <div class="accordion-content">
+                <p class="metodo-item-desc">São 6 encontros presenciais de 4 horas cada, distribuídos ao longo do
+                  programa, em ritmo que permite absorver, aplicar no trabalho e retornar com novas perguntas. O formato
+                  presencial não é acidente — é filosofia. A transformação de caráter exige fricção real, olho no olho,
+                  discussão que desacomoda. Cada sessão tem estrutura definida: abertura reflexiva, conteúdo aplicado,
+                  laboratório prático e encerramento com compromisso individual. O ambiente é deliberadamente pequeno e
+                  seguro para que conversas difíceis aconteçam com profundidade.</p>
+              </div>
+            </li>
+            <li class="metodo-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p class="metodo-item-title display">2 mentorias em grupo ao vivo</p>
+              </div>
+              <div class="accordion-content">
+                <p class="metodo-item-desc">Dois momentos exclusivos de direcionamento individual com Daniela Athia,
+                  agendados em datas estratégicas do programa: uma na fase inicial, para calibrar suas metas e
+                  identificar os padrões de comportamento que precisam ser trabalhados com urgência; e outra na fase
+                  final, para consolidar os avanços, mapear os pontos cegos que persistem e construir um plano de
+                  continuidade pós-programa. Daniela mergulha na sua realidade específica — seu setor, sua equipe, suas
+                  tensões — e entrega orientações cirúrgicas que vão muito além do conteúdo coletivo dos encontros
+                  presenciais.</p>
+              </div>
+            </li>
+            <li class="metodo-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p class="metodo-item-title display">Material didático exclusivo</p>
+              </div>
+              <div class="accordion-content">
+                <p class="metodo-item-desc">Você recebe um conjunto de materiais desenvolvido e refinado ao longo de
+                  mais de 20 anos de atuação da SYM Gente e Gestão dentro de empresas reais. O arsenal inclui: apostilas
+                  temáticas com base filosófica e aplicação prática para cada uma das seis virtudes; frameworks de
+                  diagnóstico de cultura organizacional; ferramentas de avaliação comportamental de equipes; guias de
+                  feedback estruturado por nível de maturidade do colaborador; mapas de gestão de conflitos; e roteiros
+                  de reuniões de alta performance. Todo material é físico e digital, para uso imediato e consulta
+                  contínua após o programa.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="metodo-aside fade-up">
+          <div class="metodo-aside-box">
+            <p class="metodo-aside-label">O resultado</p>
+            <p class="metodo-aside-quote display">"O resultado não é um líder que sabe mais. É um líder que é mais."</p>
+          </div>
+          <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com" target="_blank" class="btn-primary" style="margin-top:40px;width:100%;">Garantir meu ingresso</a>
         </div>
       </div>
     </div>
-</section>
+  </section>
 
-<!-- TURMA ABERTA -->
-<section class="turma" id="turma">
-  <div class="section-inner">
-    <div class="turma-inner">
-      <div>
-        <p class="section-label fade-up" style="color:var(--gold)">Turma Aberta</p>
-        <h2 class="section-title display light fade-up">Pela primeira vez,<br><em>para você.</em></h2>
-        <div class="section-rule fade-up"></div>
+  <!-- RESULTADOS -->
+  <section class="resultados" id="resultados">
+    <div class="section-inner">
+      <p class="section-label fade-up">Prova social</p>
+      <h2 class="section-title display fade-up">O que o Ethos<br><em>já entregou</em></h2>
+      <div class="section-rule fade-up"></div>
 
-        <p class="turma-desc fade-up">Para líderes que querem crescer agora, independente de suas empresas.</p>
-
-        <ul class="turma-list fade-up">
-          <li class="turma-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p>Encontros presenciais em grupo</p>
-            </div>
-            <div class="accordion-content">
-              <p>Uma imersão presencial ao lado de líderes de setores distintos — saúde, varejo, tecnologia, indústria, alimentação — que compartilham o mesmo compromisso com o desenvolvimento. A diversidade de contextos é intencional: ela força você a enxergar seus desafios de ângulos que sua bolha corporativa jamais ofereceria. Você expandirá um network de valor real enquanto troca vivências autênticas com pessoas que enfrentam desafios idênticos aos seus, mas chegaram a soluções que você ainda não considerou. Muitos participantes relatam que as conexões formadas nos encontros se tornam relações profissionais e pessoais duradouras.</p>
-            </div>
-          </li>
-          <li class="turma-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p>Material exclusivo SYM Gente e Gestão</p>
-            </div>
-            <div class="accordion-content">
-              <p>Todo o arsenal metodológico da SYM Gente e Gestão, construído e validado em mais de 50 projetos corporativos ao longo de 20 anos, estará nas suas mãos. Isso inclui: diagnósticos avançados de perfil comportamental e nível de maturidade de equipe; mapas táticos de resolução de conflitos organizacionais; frameworks de comunicação de autoridade sem autoritarismo; guias práticos de delegação efetiva; e ferramentas de gestão de energia e temperança para líderes sob alta pressão. Materiais que você continua usando anos depois de terminar o programa.</p>
-            </div>
-          </li>
-          <li class="turma-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p>Mentoria individual incluída</p>
-            </div>
-            <div class="accordion-content">
-              <p>É onde o genérico termina e o seu desenvolvimento começa de verdade. Em uma sessão individual reservada exclusivamente para você, Daniela Athia combina sua formação em psicologia com mais de duas décadas de experiência executiva para criar um plano de desenvolvimento personalizado. Ela identifica os padrões que estão limitando sua liderança — os que você vê e os que você não vê — e entrega orientações específicas para sua realidade, sua equipe e seu setor. Não há script. Há escuta clínica e diagnóstico preciso.</p>
-            </div>
-          </li>
-          <li class="turma-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p>Certificado de conclusão</p>
-            </div>
-            <div class="accordion-content">
-              <p>Ao concluir o programa, você recebe o certificado físico da Escola de Caráter Ethos Leadership, emitido pela SYM Gente e Gestão e assinado por Daniela Athia. O documento atesta sua formação nas seis virtudes da liderança virtuosa e a conclusão do ciclo de desenvolvimento com carga horária registrada. Mas, como Daniela costuma dizer: seu verdadeiro certificado será a mudança que as pessoas ao seu redor vão notar antes mesmo de você terminar o programa. O papel confirma o que o comportamento já vai ter demonstrado.</p>
-            </div>
-          </li>
-          <li class="turma-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p>Comunidade de líderes sérios</p>
-            </div>
-            <div class="accordion-content">
-              <p>Ser um líder de alto nível pode ser uma jornada solitária. A maioria das pessoas ao seu redor não compartilha a mesma régua de exigência — e isso isola. No Ethos, você entra para uma comunidade de líderes que levam desenvolvimento a sério e que continuam se encontrando muito além do término do programa. Um grupo onde é seguro admitir incertezas, pedir feedback real e compartilhar avanços sem vaidade. Um conselho não oficial de pessoas que entendem o que você está construindo porque estão construindo algo semelhante.</p>
-            </div>
-          </li>
-          <li class="turma-item accordion-item">
-            <div class="accordion-header">
-              <span class="js-arrow">→</span>
-              <p>Vagas limitadas · turma reduzida</p>
-            </div>
-            <div class="accordion-content">
-              <p>O Ethos Leadership não escala porque não foi desenhado para escalar. Cada turma é composta por um número reduzido de participantes — o suficiente para garantir que cada líder seja visto, ouvido e desafiado de forma individual. Essa escolha tem um custo deliberado: significa que há sempre mais interessados do que vagas disponíveis. Significa também que as discussões nos encontros têm profundidade real, que o sigilo das informações corporativas compartilhadas é preservado, e que Daniela Athia conhece o nome, o contexto e o desafio de cada pessoa na sala.</p>
-            </div>
-          </li>
-        </ul>
-
-        <div style="overflow:hidden;height:280px;margin:40px 0;" class="fade-up">
-          <img src="./assets/turma-aberta.webp" alt="Turma Aberta Ethos Leadership" style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+      <div class="resultados-metrics fade-up">
+        <div class="metric-card">
+          <p class="metric-num display"><span class="count-num" data-target="70" data-suffix="%">0</span></p>
+          <p class="metric-label">de redução de turnover</p>
         </div>
-
-        <div class="fade-up">
-          <span class="badge-urgencia">Vagas Limitadas · Lista de Espera Aberta</span>
+        <div class="metric-card">
+          <p class="metric-num display"><span class="count-num" data-target="50" data-prefix="+">0</span></p>
+          <p class="metric-label">projetos entregues</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-num display"><span class="count-num" data-target="20" data-prefix="+">0</span></p>
+          <p class="metric-label">anos em educação executiva</p>
+        </div>
+        <div class="metric-card">
+          <p class="metric-num display"><span class="count-num" data-target="5" data-suffix="+">0</span></p>
+          <p class="metric-label">anos de relação contínua</p>
         </div>
       </div>
 
-      <div class="turma-right fade-up">
-        <p class="turma-box-label">O que você vai desenvolver</p>
-        <h3 class="turma-box-title display">Escola de Caráter</h3>
-        <p class="turma-box-sub">Não é um treinamento. É uma escola. Uma escola de caráter.</p>
+      <div class="depoimentos-grid fade-up">
+        <div class="depoimento">
+          <div class="depo-dash"></div>
+          <p class="depo-text display">"A Dani não é apenas uma consultora. Ela se envolve e se doa de corpo e alma.
+            Cuida das nossas estratégias como se fossem dela."</p>
+          <div class="depo-author">
+            <strong>Bárbara Pestille</strong>
+            Diretora Administrativa · JB Limpeza e Conservação
+          </div>
+        </div>
+        <div class="depoimento">
+          <div class="depo-dash"></div>
+          <p class="depo-text display">"Trabalhamos com a Daniela há mais de 5 anos. Criativa e com didática impecável,
+            aborda os temas com profundidade e precisão."</p>
+          <div class="depo-author">
+            <strong>Edinéia da Silva Lima</strong>
+            Coordenadora de RH · Soprano
+          </div>
+        </div>
+      </div>
 
-        <ul class="turma-features">
-          <li class="turma-feature">
-            <div class="feature-icon">I</div>
-            As seis virtudes da base filosófica à aplicação prática no seu dia a dia
-          </li>
-          <li class="turma-feature">
-            <div class="feature-icon">II</div>
-            Autoconhecimento real, não o superficial das ferramentas de perfil
-          </li>
-          <li class="turma-feature">
-            <div class="feature-icon">III</div>
-            Ferramentas concretas, feedback, tomada de decisão, gestão de conflitos
-          </li>
-          <li class="turma-feature">
-            <div class="feature-icon">IV</div>
-            Uma comunidade de líderes que levam desenvolvimento a sério
-          </li>
-          <li class="turma-feature">
-            <div class="feature-icon">V</div>
-            Mentorias com Daniela Athia — +20 anos de experiência real
-          </li>
-        </ul>
+      <!-- CARROSSEL DE LOGOS -->
+      <div class="social-proof">
+        <p class="section-label" style="text-align:center;margin-bottom:20px;">Empresas onde já entregou resultados</p>
+        <div class="logos-marquee">
+          <div class="logos-track" id="trackLogos">
+            <img src="./assets/logos/advanced-marketing-Dw12YgNp.webp" alt="Advanced Marketing">
+            <img src="./assets/logos/canto-do-cupim-rYr-GA67.webp" alt="Canto do Cupim">
+            <img src="./assets/logos/distribuidora-lopes-Am9aPLaD.webp" alt="Distribuidora Lopes">
+            <img src="./assets/logos/figueira-restaurante-.webp" alt="Figueira Restaurante">
+            <img src="./assets/logos/imagetech-CEx0pKjI.svg" alt="Imagetech">
+            <img src="./assets/logos/jb-limpeza-BktZaQtE.webp" alt="JB Limpeza">
+            <img src="./assets/logos/masseria-KgFqJgEv.avif" alt="Masseria">
+            <img src="./assets/logos/michellis-burguer-DovtJhW4.webp" alt="Michellis Burguer">
+            <img src="./assets/logos/pao-e-tal-BVGnCUbg.webp" alt="Pão e Tal">
+            <img src="./assets/logos/tasto-BXP2uTq9.webp" alt="Tasto">
+            <img src="./assets/logos/tecsinapse-DypfI7O9.webp" alt="Tecsinapse">
+            <img src="./assets/logos/territorio-ristorante.webp" alt="Territorio Ristorante">
+            <img src="./assets/logos/velutex-BHGLbBya.webp" alt="Velutex">
+            <img src="./assets/logos/vermelho-grill-DLdXOZ0Y.avif" alt="Vermelho Grill">
+            <img src="./assets/logos/zornimat-BPKrMGR9.webp" alt="Zornimat">
+          </div>
+        </div>
+      </div>
+  </section>
 
-        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+garantir+minha+vaga+urgente+na+Turma+Aberta." target="_blank" class="btn-primary" style="margin-top:2.5rem;display:inline-flex;width:100%;">Garantir minha vaga agora</a>
+  <!-- TURMA ABERTA -->
+  <section class="turma" id="turma">
+    <div class="section-inner">
+      <div class="turma-inner">
+        <div>
+          <p class="section-label fade-up" style="color:var(--gold)">Turma Aberta</p>
+          <h2 class="section-title display light fade-up">Pela primeira vez,<br><em>para você.</em></h2>
+          <div class="section-rule fade-up"></div>
+
+          <p class="turma-desc fade-up">Para líderes que querem crescer agora, independente de suas empresas.</p>
+
+          <ul class="turma-list fade-up">
+            <li class="turma-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p>Encontros presenciais em grupo</p>
+              </div>
+              <div class="accordion-content">
+                <p>Uma imersão presencial ao lado de líderes de setores distintos — saúde, varejo, tecnologia,
+                  indústria, alimentação — que compartilham o mesmo compromisso com o desenvolvimento. A diversidade de
+                  contextos é intencional: ela força você a enxergar seus desafios de ângulos que sua bolha corporativa
+                  jamais ofereceria. Você expandirá um network de valor real enquanto troca vivências autênticas com
+                  pessoas que enfrentam desafios idênticos aos seus, mas chegaram a soluções que você ainda não
+                  considerou. Muitos participantes relatam que as conexões formadas nos encontros se tornam relações
+                  profissionais e pessoais duradouras.</p>
+              </div>
+            </li>
+            <li class="turma-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p>Material exclusivo SYM Gente e Gestão</p>
+              </div>
+              <div class="accordion-content">
+                <p>Todo o arsenal metodológico da SYM Gente e Gestão, construído e validado em mais de 50 projetos
+                  corporativos ao longo de 20 anos, estará nas suas mãos. Isso inclui: diagnósticos avançados de perfil
+                  comportamental e nível de maturidade de equipe; mapas táticos de resolução de conflitos
+                  organizacionais; frameworks de comunicação de autoridade sem autoritarismo; guias práticos de
+                  delegação efetiva; e ferramentas de gestão de energia e temperança para líderes sob alta pressão.
+                  Materiais que você continua usando anos depois de terminar o programa.</p>
+              </div>
+            </li>
+            <!--<li class="turma-item accordion-item">-->
+            <!--  <div class="accordion-header">-->
+            <!--    <span class="js-arrow">→</span>-->
+            <!--    <p>Mentoria individual incluída</p>-->
+            <!--  </div>-->
+            <!--  <div class="accordion-content">-->
+            <!--    <p>É onde o genérico termina e o seu desenvolvimento começa de verdade. Em uma sessão individual reservada exclusivamente para você, Daniela Athia combina sua formação em psicologia com mais de duas décadas de experiência executiva para criar um plano de desenvolvimento personalizado. Ela identifica os padrões que estão limitando sua liderança — os que você vê e os que você não vê — e entrega orientações específicas para sua realidade, sua equipe e seu setor. Não há script. Há escuta clínica e diagnóstico preciso.</p>-->
+            <!--  </div>-->
+            <!--</li>-->
+            <li class="turma-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p>Certificado de conclusão</p>
+              </div>
+              <div class="accordion-content">
+                <p>Ao concluir o programa, você recebe o certificado físico da Escola de Caráter Ethos Leadership,
+                  emitido pela SYM Gente e Gestão e assinado por Daniela Athia. O documento atesta sua formação nas seis
+                  virtudes da liderança virtuosa e a conclusão do ciclo de desenvolvimento com carga horária registrada.
+                  Mas, como Daniela costuma dizer: seu verdadeiro certificado será a mudança que as pessoas ao seu redor
+                  vão notar antes mesmo de você terminar o programa. O papel confirma o que o comportamento já vai ter
+                  demonstrado.</p>
+              </div>
+            </li>
+            <li class="turma-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p>Comunidade de líderes sérios</p>
+              </div>
+              <div class="accordion-content">
+                <p>Ser um líder de alto nível pode ser uma jornada solitária. A maioria das pessoas ao seu redor não
+                  compartilha a mesma régua de exigência — e isso isola. No Ethos, você entra para uma comunidade de
+                  líderes que levam desenvolvimento a sério e que continuam se encontrando muito além do término do
+                  programa. Um grupo onde é seguro admitir incertezas, pedir feedback real e compartilhar avanços sem
+                  vaidade. Um conselho não oficial de pessoas que entendem o que você está construindo porque estão
+                  construindo algo semelhante.</p>
+              </div>
+            </li>
+            <li class="turma-item accordion-item">
+              <div class="accordion-header">
+                <span class="js-arrow">→</span>
+                <p>Vagas limitadas · turma reduzida</p>
+              </div>
+              <div class="accordion-content">
+                <p>O Ethos Leadership não escala porque não foi desenhado para escalar. Cada turma é composta por um
+                  número reduzido de participantes — o suficiente para garantir que cada líder seja visto, ouvido e
+                  desafiado de forma individual. Essa escolha tem um custo deliberado: significa que há sempre mais
+                  interessados do que vagas disponíveis. Significa também que as discussões nos encontros têm
+                  profundidade real, que o sigilo das informações corporativas compartilhadas é preservado, e que
+                  Daniela Athia conhece o nome, o contexto e o desafio de cada pessoa na sala.</p>
+              </div>
+            </li>
+          </ul>
+
+          <div style="overflow:hidden;height:280px;margin:40px 0;" class="fade-up">
+            <img src="./assets/turma-aberta.webp" alt="Turma Aberta Ethos Leadership"
+              style="width:100%;height:100%;object-fit:cover;object-position:center 30%;">
+          </div>
+
+          <div class="fade-up">
+            <span class="badge-urgencia">Vagas Limitadas · Lista de Espera Aberta</span>
+          </div>
+        </div>
+
+        <div class="turma-right fade-up">
+          <p class="turma-box-label">O que você vai desenvolver</p>
+          <h3 class="turma-box-title display">Escola de Caráter</h3>
+          <p class="turma-box-sub">Não é um treinamento. É uma escola. Uma escola de caráter.</p>
+
+          <ul class="turma-features">
+            <li class="turma-feature">
+              <div class="feature-icon">I</div>
+              As seis virtudes da base filosófica à aplicação prática no seu dia a dia
+            </li>
+            <li class="turma-feature">
+              <div class="feature-icon">II</div>
+              Autoconhecimento real, não o superficial das ferramentas de perfil
+            </li>
+            <li class="turma-feature">
+              <div class="feature-icon">III</div>
+              Ferramentas concretas, feedback, tomada de decisão, gestão de conflitos
+            </li>
+            <li class="turma-feature">
+              <div class="feature-icon">IV</div>
+              Uma comunidade de líderes que levam desenvolvimento a sério
+            </li>
+            <li class="turma-feature">
+              <div class="feature-icon">V</div>
+              Mentorias com Daniela Athia — +20 anos de experiência real
+            </li>
+          </ul>
+
+          <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com" target="_blank" class="btn-primary"
+            style="margin-top:2.5rem;display:inline-flex;width:100%;">Adquirir meu Ingresso agora</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SOBRE A FUNDADORA -->
-<section class="sobre-section" id="sobre">
-  <div class="section-inner">
-    <p class="section-label fade-up">A Fundadora</p>
-    <h2 class="section-title display fade-up">Daniela<br><em>Athia</em></h2>
-    <div class="section-rule fade-up"></div>
+  <!-- SOBRE A FUNDADORA -->
+  <section class="sobre-section" id="sobre">
+    <div class="section-inner">
+      <p class="section-label fade-up">A Fundadora</p>
+      <h2 class="section-title display fade-up">Daniela<br><em>Athia</em></h2>
+      <div class="section-rule fade-up"></div>
 
-    <div class="sobre-layout fade-up">
-      <div class="sobre-content">
-        <p class="manifesto-intro" style="margin-bottom:40px;">
-          "Sou Daniela Athia, psicóloga e especialista em desenvolvimento humano, com mais de 20 anos de experiência em gestão estratégica de pessoas."
-        </p>
-        <p class="sobre-text">Desde 2006 ajudo organizações de múltiplos portes a construir gestão e áreas sólidas e estratégicas num desenvolvimento sustentável.</p>
-        <p class="sobre-text">Com mais de 50 projetos conduzidos, formei líderes e fortaleço o nível corporativo em diversas marcas premiadas de altíssima relevância.</p>
-        <p class="sobre-text">Minha visão técnica e sensibilidade humana transformam culturas organizacionais genéricas em reais estruturas de alto crescimento constante e firme.</p>
-      </div>
+      <div class="sobre-layout fade-up">
+        <div class="sobre-content">
+          <p class="manifesto-intro" style="margin-bottom:40px;">
+            "Sou Daniela Athia, psicóloga e especialista em desenvolvimento humano, com mais de 20 anos de experiência
+            em gestão estratégica de pessoas."
+          </p>
+          <p class="sobre-text">Desde 2006 ajudo organizações de múltiplos portes a construir gestão e áreas sólidas e
+            estratégicas num desenvolvimento sustentável.</p>
+          <p class="sobre-text">Com mais de 50 projetos conduzidos, formei líderes e fortaleço o nível corporativo em
+            diversas marcas premiadas de altíssima relevância.</p>
+          <p class="sobre-text">Minha visão técnica e sensibilidade humana transformam culturas organizacionais
+            genéricas em reais estruturas de alto crescimento constante e firme.</p>
+        </div>
 
-      <div class="sobre-photo">
-        <img src="./assets/daniela-perfil.webp" alt="Daniela Athia — Fundadora Ethos Leadership" style="width:100%;border-radius:4px;aspect-ratio:3/4;object-fit:cover;object-position:top;">
+        <div class="sobre-photo">
+          <img src="./assets/daniela-perfil.webp" alt="Daniela Athia — Fundadora Ethos Leadership"
+            style="width:100%;border-radius:4px;aspect-ratio:3/4;object-fit:cover;object-position:top;">
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- FAQ -->
-<section class="faq" id="faq">
-  <div class="section-inner">
-    <div class="faq-inner">
-      <p class="section-label fade-up">Tire suas dúvidas</p>
-      <h2 class="section-title display fade-up">Perguntas<br><em>Frequentes</em></h2>
+  <!-- CRONOGRAMA -->
+  <section class="cronograma" id="cronograma" style="background: var(--olive);">
+    <div class="section-inner">
+      <p class="section-label fade-up" style="color:var(--gold);">A Jornada</p>
+      <h2 class="section-title display light fade-up">Cronograma dos<br><em>Encontros</em></h2>
       <div class="section-rule fade-up"></div>
 
       <ul class="turma-list fade-up">
         <li class="turma-item accordion-item">
           <div class="accordion-header">
             <span class="js-arrow">→</span>
-            <p>Para quem é o Ethos Leadership?</p>
+            <p><strong>11/06</strong> — Encontro 1: Ethos: O Líder que Você É</p>
           </div>
           <div class="accordion-content">
-            <p>O Ethos foi desenhado cirurgicamente para empresários inquietos, diretores, líderes e gestores que já perceberam que apenas intuição não basta mais. É para quem já entrega resultados mas sente que o time trava quando sai da sala. Para quem fez cursos de gestão e percebeu que o problema não era técnica — era cultura. Para quem quer parar de apagar incêndios e construir algo que dure. Se você precisa formar times autônomos, dar feedbacks que transformam sem destruir, tomar decisões difíceis com clareza ética e liderar com autoridade que inspira em vez de intimidar — este programa foi forjado para o seu nível de ambição.</p>
+            <p style="color:var(--gold); margin-bottom:10px;"><em>Virtude: Humildade</em></p>
+            <p style="color:rgba(245, 240, 232, 0.8);">O ponto de partida da jornada. Antes de liderar qualquer pessoa, o líder precisa se conhecer: seus
+              talentos reais, seus limites reais, e a distância entre quem ele acredita ser e quem ele de fato é. Este
+              encontro questiona a identidade do líder de dentro para fora.</p>
+            <p style="margin-top:15px; font-weight:400; color:var(--cream);">Conteúdo central:</p>
+            <ul style="list-style:disc; margin-left:20px; color:rgba(245, 240, 232, 0.7); font-size:0.88rem;">
+              <li>O que é caráter e por que ele lidera antes da técnica</li>
+              <li>As três eras da liderança: tubarão, bonzinho, virtuoso e onde você está</li>
+              <li>Humildade como fundação: a diferença entre falsa modéstia e autoconhecimento real</li>
+              <li>Diagnóstico de si: mapa de talentos, shadows e padrões de comportamento</li>
+              <li>O conceito de ethos em Aristóteles: caráter como hábito construído, não dom recebido</li>
+            </ul>
           </div>
         </li>
         <li class="turma-item accordion-item">
           <div class="accordion-header">
             <span class="js-arrow">→</span>
-            <p>O Método SYM é aplicável em qualquer segmento?</p>
+            <p><strong>25/06</strong> — Encontro 2: A Arte de Decidir Bem</p>
           </div>
           <div class="accordion-content">
-            <p>Absolutamente. O Método SYM já foi aplicado em empresas de saúde, varejo, serviços, indústria, tecnologia, agronegócio e alimentação. A razão é simples: independentemente do setor, líderes lideram pessoas — e pessoas funcionam segundo as mesmas leis psicológicas. Precisam de clareza, pertencimento, reconhecimento, limites e propósito. As ferramentas do Ethos abordam a estrutura da influência e da autoridade de forma universal. O que muda entre setores são os contextos nos casos práticos — e isso é exatamente o que a metodologia ativa e os debates da turma proporcionam de forma personalizada para cada participante.</p>
+            <p style="color:var(--gold); margin-bottom:10px;"><em>Virtude: Prudência</em></p>
+            <p style="color:rgba(245, 240, 232, 0.8);">A prudência não é cautela é inteligência prática. É a virtude do líder que pensa antes de agir e
+              considera o impacto humano e organizacional de cada escolha. Neste encontro, o líder aprende a distinguir
+              urgência de importância e velocidade de precipitação.</p>
+            <p style="margin-top:15px; font-weight:400; color:var(--cream);">Conteúdo central:</p>
+            <ul style="list-style:disc; margin-left:20px; color:rgba(245, 240, 232, 0.7); font-size:0.88rem;">
+              <li>Phronesis aristotélica: a sabedoria prática que separa o líder do gestor</li>
+              <li>Os quatro inimigos da boa decisão: pressa, ego, medo e falta de informação</li>
+              <li>Decisões impopulares que precisam ser tomadas, e como tomá-las com integridade</li>
+              <li>O líder como árbitro moral da equipe: quando seu julgamento molda a cultura</li>
+              <li>Estudo de caso: decisões que definiram (ou destruíram) organizações reais</li>
+            </ul>
           </div>
         </li>
         <li class="turma-item accordion-item">
           <div class="accordion-header">
             <span class="js-arrow">→</span>
-            <p>Haverá certificado de conclusão?</p>
+            <p><strong>09/07</strong> — Encontro 3: Dar a Cada Um o Que É Seu</p>
           </div>
           <div class="accordion-content">
-            <p>Sim. Ao concluir o programa você recebe o certificado físico e digital da Escola de Caráter Ethos Leadership, com carga horária registrada e assinatura de Daniela Athia. O documento tem validade profissional e pode ser utilizado em processos seletivos, promoções e portfólio executivo. Mas Daniela é direta: o certificado é consequência, não objetivo. Seu verdadeiro atestado será a equipe que você manterá sem precisar controlar, os conflitos que resolverá sem precisar de árbitro, e as metas que atingirá porque as pessoas ao seu redor vão querer — não porque serão obrigadas.</p>
+            <p style="color:var(--gold); margin-bottom:10px;"><em>Virtude: Justiça</em></p>
+            <p style="color:rgba(245, 240, 232, 0.8);">A justiça é a virtude relacional da liderança, ela define como o líder trata as pessoas. Cobrar de forma
+              justa, reconhecer o mérito, criar um ambiente onde as regras valem para todos. Sem justiça, a cultura
+              apodrece e nenhum treinamento de clima organizacional conserta isso.</p>
+            <p style="margin-top:15px; font-weight:400; color:var(--cream);">Conteúdo central:</p>
+            <ul style="list-style:disc; margin-left:20px; color:rgba(245, 240, 232, 0.7); font-size:0.88rem;">
+              <li>Justiça como virtude e não como norma: a diferença entre cumprir regras e tratar bem</li>
+              <li>O líder que cobra e o líder que pune: distinção fundamental</li>
+              <li>Reconhecimento como ato de justiça, por que elogiar também é dever do líder</li>
+              <li>Favoritismo, nepotismo e dois pesos duas medidas: como o líder corrói a cultura sem perceber</li>
+              <li>Feedback justo: como dar retorno que desenvolve em vez de diminuir</li>
+            </ul>
           </div>
         </li>
         <li class="turma-item accordion-item">
           <div class="accordion-header">
             <span class="js-arrow">→</span>
-            <p>Como funciona o acompanhamento do curso?</p>
+            <p><strong>30/07</strong> — Encontro 4: O Líder que Enfrenta</p>
           </div>
           <div class="accordion-content">
-            <p>O acompanhamento começa antes do primeiro encontro — com um diagnóstico inicial de liderança que orienta a personalização do seu percurso — e continua depois do último. Durante o programa, você tem acesso às mentorias individuais com Daniela, ao grupo da turma para troca contínua entre os encontros e ao material de apoio para aplicação semanal. Após o encerramento, os participantes mantêm acesso à comunidade do Ethos e são convidados para eventos exclusivos de atualização. O programa não tem uma data de término real: é uma comunidade permanente de líderes em desenvolvimento contínuo.</p>
+            <p style="color:var(--gold); margin-bottom:10px;"><em>Virtude: Fortaleza</em></p>
+            <p style="color:rgba(245, 240, 232, 0.8);">Fortaleza não é ausência de medo é agir apesar dele. Este é o encontro mais incômodo do programa, e
+              propositalmente. O líder precisa aprender a fazer o que precisa ser feito: o feedback difícil, a demissão
+              necessária, a decisão impopular, o conflito que ninguém quer ter.</p>
+            <p style="margin-top:15px; font-weight:400; color:var(--cream);">Conteúdo central:</p>
+            <ul style="list-style:disc; margin-left:20px; color:rgba(245, 240, 232, 0.7); font-size:0.88rem;">
+              <li>Fortaleza como virtude do meio: entre a covardia e a imprudência</li>
+              <li>Os dois tipos de fuga do líder: explosão e omissão e por que os dois destroem</li>
+              <li>Como dar o feedback que precisa ser dado: methodology and practice</li>
+              <li>Conflito necessário vs. conflito destrutivo: o líder que não foge e o líder que não incendeia</li>
+              <li>Resiliência como resultado do caráter, não da resiliência como slogan corporativo</li>
+            </ul>
+          </div>
+        </li>
+        <li class="turma-item accordion-item">
+          <div class="accordion-header">
+            <span class="js-arrow">→</span>
+            <p><strong>13/08</strong> — Encontro 5: Governar a Si Mesmo</p>
+          </div>
+          <div class="accordion-content">
+            <p style="color:var(--gold); margin-bottom:10px;"><em>Virtude: Temperança</em></p>
+            <p style="color:rgba(245, 240, 232, 0.8);">O líder que não se governa não governa ninguém. A temperança é a âncora emocional do time e o líder que
+              oscila, que explode, que cede ao humor e às pressões contamina toda a cultura ao redor. Este encontro
+              trata do autodomínio como competência de liderança.</p>
+            <p style="margin-top:15px; font-weight:400; color:var(--cream);">Conteúdo central:</p>
+            <ul style="list-style:disc; margin-left:20px; color:rgba(245, 240, 232, 0.7); font-size:0.88rem;">
+              <li>Temperança: a virtude que ninguém coloca no currículo mas todo time percebe</li>
+              <li>O papel das emoções na liderança: é nem repressão nem explosão</li>
+              <li>Padrões de descontrole: como o líder sabota a si mesmo nos momentos decisivos</li>
+              <li>Presença e consistência: como a estabilidade emocional gera confiança no time</li>
+              <li>O líder como modelo: o que seu comportamento está ensinando sua equipe todos os dias</li>
+            </ul>
+          </div>
+        </li>
+        <li class="turma-item accordion-item">
+          <div class="accordion-header">
+            <span class="js-arrow">→</span>
+            <p><strong>27/08</strong> — Encontro 6: Alma Grande: O Líder que Você Pode Ser</p>
+          </div>
+          <div class="accordion-content">
+            <p style="color:var(--gold); margin-bottom:10px;"><em>Virtude: Magnanimidade</em></p>
+            <p style="color:rgba(245, 240, 232, 0.8);">O encontro de chegada e de partida ao mesmo tempo. Magna anima; alma grande. A coragem de sonhar à altura
+              do seu potencial, de formar outros líderes, de deixar um legado que vai além do cargo. Este encontro
+              integra toda a jornada e lança o líder para o que vem depois.</p>
+            <p style="margin-top:15px; font-weight:400; color:var(--cream);">Conteúdo central:</p>
+            <ul style="list-style:disc; margin-left:20px; color:rgba(245, 240, 232, 0.7); font-size:0.88rem;">
+              <li>Magnanimidade: por que a maioria dos líderes vive abaixo do que poderia ser</li>
+              <li>Vocação e propósito: a diferença entre ter um cargo e ter uma missão</li>
+              <li>Formar outros líderes como ato de grandeza, multiplicar em vez de reter</li>
+              <li>Legado: o que seu time vai lembrar de você daqui a 10 anos?</li>
+              <li>Integração das seis virtudes: o mapa do líder virtuoso como prática diária, não como ideal distante
+              </li>
+            </ul>
           </div>
         </li>
       </ul>
     </div>
-  </div>
-</section>
+  </section>
 
-
-<!-- OFERTA / PREÇO -->
-<section class="oferta" id="oferta">
-  <div class="section-inner">
-    <div class="oferta-header fade-up" style="text-align:center;margin-bottom:64px;">
-      <p class="section-label" style="text-align:center;display:block;">Investimento</p>
-      <h2 class="section-title display" style="text-align:center;color:var(--charcoal);">Sua vaga no<br><em>Ethos Leadership</em></h2>
-      <div class="section-rule" style="margin:16px auto 0;"></div>
+  <!-- OFERTA / PREÇO -->
+  <section class="oferta" id="oferta">
+    <div class="section-inner">
+      <div class="oferta-header fade-up" style="text-align:center;margin-bottom:64px;">
+        <p class="section-label" style="text-align:center;display:block;">Investimento</p>
+        <h2 class="section-title display" style="text-align:center;color:var(--charcoal);">Sua vaga no<br><em>Ethos
+            Leadership</em></h2>
+        <div class="section-rule" style="margin:16px auto 0;"></div>
+      </div>
+      <div class="oferta-grid">
+        <div class="oferta-card-main fade-up">
+          <div class="oferta-card-badge">Turma Aberta · Vagas limitadas</div>
+          <ul class="oferta-includes">
+            <li><span class="oferta-check">✦</span>24h de formação presencial em 6 encontros de alto nível</li>
+            <li><span class="oferta-check">✦</span>2 mentorias em grupo ao vivo com Daniela Athia</li>
+            <li><span class="oferta-check">✦</span>Material didático exclusivo SYM físico e digital</li>
+            <li><span class="oferta-check">✦</span>Diagnóstico inicial personalizado de liderança</li>
+            <li><span class="oferta-check">✦</span>Acesso a material exclusivo</li>
+            <li><span class="oferta-check">✦</span>Certificado físico da Escola de Caráter</li>
+          </ul>
+          <div class="oferta-price-area" id="oferta-price-area">
+            <span class="oferta-price-label">Investimento total</span>
+            <div class="oferta-price">
+              <span class="oferta-currency">R$</span>
+              <span class="oferta-value">1.600</span>
+            </div>
+            <p class="oferta-price-sub">ou em até <strong>6× R$ 297,00</p>
+          </div>
+          <div class="oferta-urgencia" style="margin-bottom:20px;">
+            <div class="oferta-urg-dot"></div>
+            <div>
+              <p class="oferta-urg-title">Turma com vagas limitadas</p>
+              <p class="oferta-urg-text">Encontros quinzenais</p>
+              <p class="oferta-urg-text">18h30 as 22h30</p>
+              <p class="oferta-urg-text" style="line-height: 1.4;">Início: 11 de Junho<br> Término: 27 de Agosto</p>
+            </div>
+          </div>
+          <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com" target="_blank" class="btn-primary oferta-btn">
+            Adquirir meu Ingresso agora
+          </a>
+          <p class="oferta-disclaimer">Vagas preenchidas por ordem de inscrição</p>
+          <p class="oferta-disclaimer">Para mais informações, entre em contato pelo WhatsApp.</p>
+        </div>
+        <div class="oferta-side">
+          <div class="oferta-quote fade-up">
+            <p class="oferta-quote-text display">"O custo de não se desenvolver como líder é pago pela sua equipe, pela
+              sua empresa e por você todo dia."</p>
+            <p class="oferta-quote-author">— Daniela Athia</p>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="oferta-grid">
-      <div class="oferta-card-main fade-up">
-        <div class="oferta-card-badge">Turma Aberta · Vagas Limitadas</div>
-        <ul class="oferta-includes">
-          <li><span class="oferta-check">✦</span>24h de formação presencial e 6 encontros de alto nível</li>
-          <li><span class="oferta-check">✦</span>2 mentorias individuais ao vivo com Daniela Athia</li>
-          <li><span class="oferta-check">✦</span>Material didático exclusivo SYM físico e digital</li>
-          <li><span class="oferta-check">✦</span>Diagnóstico inicial personalizado de liderança</li>
-          <li><span class="oferta-check">✦</span>Acesso permanente à comunidade de líderes Ethos</li>
-          <li><span class="oferta-check">✦</span>Certificado físico da Escola de Caráter</li>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="section-inner">
+      <div class="faq-inner">
+        <p class="section-label fade-up">Tire suas dúvidas</p>
+        <h2 class="section-title display fade-up">Perguntas<br><em>Frequentes</em></h2>
+        <div class="section-rule fade-up"></div>
+
+        <ul class="turma-list fade-up">
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Para quem é o Ethos Leadership?</p>
+            </div>
+            <div class="accordion-content">
+              <p>O Ethos foi desenhado cirurgicamente para empresários inquietos, diretores, líderes e gestores que já
+                perceberam que apenas intuição não basta mais. É para quem já entrega resultados mas sente que o time
+                trava quando sai da sala. Para quem fez cursos de gestão e percebeu que o problema não era técnica — era
+                cultura. Para quem quer parar de apagar incêndios e construir algo que dure. Se você precisa formar
+                times autônomos, dar feedbacks que transformam sem destruir, tomar decisões difíceis com clareza ética e
+                liderar com autoridade que inspira em vez de intimidar — este programa foi forjado para o seu nível de
+                ambição.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>O Método SYM é aplicável em qualquer segmento?</p>
+            </div>
+            <div class="accordion-content">
+              <p>Absolutamente. O Método SYM já foi aplicado em empresas de saúde, varejo, serviços, indústria,
+                tecnologia, agronegócio e alimentação. A razão é simples: independentemente do setor, líderes lideram
+                pessoas — e pessoas funcionam segundo as mesmas leis psicológicas. Precisam de clareza, pertencimento,
+                reconhecimento, limites e propósito. As ferramentas do Ethos abordam a estrutura da influência e da
+                autoridade de forma universal. O que muda entre setores são os contextos nos casos práticos — e isso é
+                exatamente o que a metodologia ativa e os debates da turma proporcionam de forma personalizada para cada
+                participante.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Haverá certificado de conclusão?</p>
+            </div>
+            <div class="accordion-content">
+              <p>Sim. Ao concluir o programa você recebe o certificado físico e digital da Escola de Caráter Ethos
+                Leadership, com carga horária registrada e assinatura de Daniela Athia. O documento tem validade
+                profissional e pode ser utilizado em processos seletivos, promoções e portfólio executivo. Mas Daniela é
+                direta: o certificado é consequência, não objetivo. Seu verdadeiro atestado será a equipe que você
+                manterá sem precisar controlar, os conflitos que resolverá sem precisar de árbitro, e as metas que
+                atingirá porque as pessoas ao seu redor vão querer — não porque serão obrigadas.</p>
+            </div>
+          </li>
+          <li class="turma-item accordion-item">
+            <div class="accordion-header">
+              <span class="js-arrow">→</span>
+              <p>Ainda não sou líder, posso fazer o curso?</p>
+            </div>
+            <div class="accordion-content">
+              <p>O Ethos Leadership é exclusivamente para líderes, porém teremos em breve a versão Ethos Origens para
+                futuros líderes.</p>
+            </div>
+          </li>
         </ul>
-        <div class="oferta-price-area">
-          <span class="oferta-price-label">Investimento total</span>
-          <div class="oferta-price">
-            <span class="oferta-currency">R$</span>
-            <span class="oferta-value">3.000</span>
-          </div>
-          <p class="oferta-price-sub">ou em até <strong>6× R$ 500</strong> no cartão</p>
-        </div>
-        <div class="oferta-urgencia" style="margin-bottom:20px;">
-          <div class="oferta-urg-dot"></div>
-          <div>
-            <p class="oferta-urg-title">Turma com vagas limitadas</p>
-            <p class="oferta-urg-text">O programa é intencionalmente pequeno. Quando as vagas esgotam, a próxima turma não tem data garantida.</p>
-          </div>
-        </div>
-        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+garantir+minha+vaga+no+Ethos+Leadership." target="_blank" class="btn-primary oferta-btn">
-          Garantir minha vaga agora
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#" class="footer-logo">
+          <span>ἤθος</span>
+          Ethos
         </a>
-        <p class="oferta-disclaimer">Vagas preenchidas por ordem de inscrição.<br>Confirme sua reserva pelo WhatsApp com a Daniela.</p>
+        <p class="footer-tagline">Caráter que lidera. Virtude que transforma.</p>
       </div>
-      <div class="oferta-side">
-        <div class="oferta-quote fade-up">
-          <p class="oferta-quote-text display">"O custo de não se desenvolver como líder é pago pela sua equipe, pela sua empresa e por você todo dia."</p>
-          <p class="oferta-quote-author">— Daniela Athia</p>
+
+      <div class="footer-nav">
+        <p class="footer-heading">Navegação</p>
+        <div class="footer-links">
+          <a href="#metodo" class="footer-link">Método SYM</a>
+          <a href="#turma" class="footer-link">Turma Aberta</a>
+          <a href="#sobre" class="footer-link">A Fundadora</a>
+          <a href="#faq" class="footer-link">Perguntas Frequentes</a>
+        </div>
+      </div>
+
+      <div class="footer-contact">
+        <p class="footer-heading">Contato</p>
+        <div class="footer-links">
+          <a href="https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com"
+            target="_blank" class="footer-link">Inscrição via Formulário</a>
+          <a href="https://www.symgente.com.br" target="_blank" class="footer-link">www.symgente.com.br</a>
+          <a href="https://instagram.com/daniathia" target="_blank" class="footer-link">Instagram @daniathia</a>
         </div>
       </div>
     </div>
-  </div>
-</section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-top">
-    <div class="footer-brand">
-      <a href="#" class="footer-logo">
-        <span>ἤθος</span>
-        Ethos
-      </a>
-      <p class="footer-tagline">Caráter que lidera. Virtude que transforma.</p>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 SYM Gente e Gestão. Todos os direitos reservados.</p>
     </div>
+  </footer>
 
-    <div class="footer-nav">
-      <p class="footer-heading">Navegação</p>
-      <div class="footer-links">
-        <a href="#metodo"    class="footer-link">Método SYM</a>
-        <a href="#turma"     class="footer-link">Turma Aberta</a>
-        <a href="#sobre"     class="footer-link">A Fundadora</a>
-        <a href="#faq"       class="footer-link">Perguntas Frequentes</a>
-      </div>
-    </div>
+  <script>
+    /* ── HAMBURGUER MOBILE ── */
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
 
-    <div class="footer-contact">
-      <p class="footer-heading">Contato</p>
-      <div class="footer-links">
-        <a href="https://wa.me/5567999999999?text=Ol%C3%A1%21+Quero+saber+mais+sobre+o+Ethos+Leadership." target="_blank" class="footer-link">Inscrição via WhatsApp</a>
-        <a href="https://www.symgente.com.br" target="_blank" class="footer-link">www.symgente.com.br</a>
-        <a href="https://instagram.com/daniathia" target="_blank" class="footer-link">Instagram @daniathia</a>
-      </div>
-    </div>
-  </div>
+    function closeMenu() {
+      hamburger.classList.remove('open');
+      navMobile.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      navMobile.setAttribute('aria-hidden', 'true');
+    }
 
-  <div class="footer-bottom">
-    <p>&copy; 2026 SYM Gente e Gestão. Todos os direitos reservados.</p>
-  </div>
-</footer>
+    if (hamburger) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = navMobile.classList.contains('open');
+        if (isOpen) {
+          closeMenu();
+        } else {
+          hamburger.classList.add('open');
+          navMobile.classList.add('open');
+          hamburger.setAttribute('aria-expanded', 'true');
+          navMobile.setAttribute('aria-hidden', 'false');
+        }
+      });
 
-<script src="script.js" defer></script>
+      // Fechar ao clicar fora
+      document.addEventListener('click', (e) => {
+        if (!hamburger.contains(e.target) && !navMobile.contains(e.target)) {
+          closeMenu();
+        }
+      });
+
+      // Fechar ao redimensionar para desktop
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 900) closeMenu();
+      });
+    }
+
+    /* ── FADE-UP SCROLL ── */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    /* ── MARQUEE INFINITO ── */
+    ['trackPhrases', 'trackLogos'].forEach(id => {
+      const marqTrack = document.getElementById(id);
+      if (marqTrack && marqTrack.children.length > 0) {
+        if (!marqTrack.dataset.cloned) {
+          Array.from(marqTrack.children).forEach(item => {
+            const clone = item.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            marqTrack.appendChild(clone);
+          });
+          marqTrack.dataset.cloned = 'true';
+        }
+      }
+    });
+
+    /* ── HOVER CARDS ── */
+    document.querySelectorAll('.era-card:not(.featured), .metric-card, .depoimento').forEach(card => {
+      card.style.transition = 'transform 0.28s ease, box-shadow 0.28s ease';
+      card.addEventListener('mouseenter', () => {
+        card.style.transform = 'translateY(-4px)';
+        card.style.boxShadow = '0 10px 32px rgba(95,87,58,0.18)';
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.transform = '';
+        card.style.boxShadow = '';
+      });
+    });
+
+    /* ── ACCORDION ── */
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const isOpen = item.classList.contains('active');
+
+        // Fecha todos
+        document.querySelectorAll('.accordion-item').forEach(other => {
+          other.classList.remove('active');
+        });
+
+        // Abre o clicado (se estava fechado)
+        if (!isOpen) item.classList.add('active');
+      });
+
+      // Hover na seta
+      header.addEventListener('mouseenter', () => {
+        const item = header.parentElement;
+        const arrow = header.querySelector('.js-arrow');
+        if (arrow && !item.classList.contains('active')) {
+          arrow.style.transform = 'translateX(5px)';
+        }
+      });
+      header.addEventListener('mouseleave', () => {
+        const item = header.parentElement;
+        const arrow = header.querySelector('.js-arrow');
+        if (arrow && !item.classList.contains('active')) {
+          arrow.style.transform = '';
+        }
+      });
+    });
+
+    /* ── SETAS EM LINKS COM JS-ARROW (exceto accordion) ── */
+    document.querySelectorAll('a').forEach(link => {
+      const arrow = link.querySelector('.js-arrow');
+      if (!arrow) return;
+      // Não interfere nos accordions
+      if (link.closest('.accordion-header')) return;
+
+      arrow.style.display = 'inline-block';
+      arrow.style.transition = 'transform 0.35s cubic-bezier(0.2, 0.8, 0.2, 1)';
+
+      link.addEventListener('mouseenter', () => { arrow.style.transform = 'translateX(6px)'; });
+      link.addEventListener('mouseleave', () => { arrow.style.transform = ''; });
+    });
+
+    /* ── SUBMIT FORM (se existir) ── */
+    function submitForm(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('.btn-submit');
+      if (!btn) return;
+      btn.textContent = 'Enviado com sucesso ✓';
+      btn.style.background = '#5F573A';
+      btn.style.color = '#F5F0E8';
+      btn.disabled = true;
+      setTimeout(() => {
+        window.open('https://form.typeform.com/to/mz4uF0W0?typeform-source=app.clickup.com', '_blank');
+      }, 1000);
+    }
+
+
+
+    /* ── CONTADOR ANIMADO ── */
+    const countEls = document.querySelectorAll('.count-num');
+    if (countEls.length) {
+      const countObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && !entry.target.dataset.counted) {
+            entry.target.dataset.counted = 'true';
+            const target = parseInt(entry.target.dataset.target);
+            const prefix = entry.target.dataset.prefix || '';
+            const suffix = entry.target.dataset.suffix || '';
+            const duration = 1800;
+            const steps = 60;
+            const increment = target / steps;
+            let current = 0;
+            let step = 0;
+            const timer = setInterval(() => {
+              step++;
+              // Easing: começa rápido, desacelera no fim
+              const ease = 1 - Math.pow(1 - step / steps, 3);
+              current = Math.round(target * ease);
+              entry.target.textContent = prefix + current + suffix;
+              if (step >= steps) {
+                clearInterval(timer);
+                entry.target.textContent = prefix + target + suffix;
+              }
+            }, duration / steps);
+          }
+        });
+      }, { threshold: 0.4 });
+
+      countEls.forEach(el => countObserver.observe(el));
+    }
+
+  </script>
 </body>
+
 </html>
